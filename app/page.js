@@ -1,95 +1,57 @@
-import Image from "next/image";
+import Explainer from "@/components/Explainer";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className={styles.first}>
+        <h1 className={styles.header}>Benvenuti nel mio blog</h1>
+        <p className={styles.text}>
+          Benvenuti nel mio spazio dedicato a raccontare storie autentiche e
+          personali sull’Ucraina. Vivo qui dal 2020 e attraverso questo blog
+          voglio condividere le mie esperienze, le sfide e le meraviglie di un
+          paese che ha cambiato profondamente la mia vita. Ogni racconto è un
+          tassello che tiene vivi i ricordi di momenti importanti, dalle
+          giornate quotidiane alla cucina locale, fino agli eventi storici che
+          hanno segnato la nazione. Unisciti a me in questo viaggio di scoperta
+          e memoria.
+        </p>
+        <p className={styles.text}>
+          Attraverso le storie che condividerò, spero di far emergere l’essenza
+          di questo paese: la sua resilienza, la gentilezza delle persone e la
+          bellezza della vita quotidiana. Ogni luogo ha una storia unica da
+          raccontare, e l’Ucraina ne è ricca. Qui, tra tradizioni radicate e
+          paesaggi affascinanti, la vita continua anche di fronte alle sfide. Il
+          mio obiettivo è condividere questi momenti, grandi e piccoli, che
+          rendono speciale la vita in questa terra.
+        </p>
+        <button className={styles.button_one}>Visita il mio blog</button>
+      </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <div className={styles.flexContainer}>
+        <div className={styles.column}>
+          <h2 className={styles.infoBoxTitle}>Supporta l'Ucraina</h2>
+          <p className={styles.text}>
+            Per supportare l’Ucraina potete donare direttamente a{" "}
+            <strong>United24</strong>, piattaforma ufficiale di raccolta fondi
+            creata dal governo ucraino nel maggio 2022, su iniziativa del
+            presidente ucraino Volodymyr Zelensky
+          </p>
+          <button className={styles.button_two}>Dona ora</button> 
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className={styles.column}>
+          <h2 className={styles.infoBoxTitle}>
+            Come United24 utilizza i fondi
+          </h2>
+          <p className={styles.text}>
+            Le donazioni raccolte tramite la piattaforma sono destinate a cinque
+            settori, che potrete scegliere dal sito: difesa, sminamento
+            umanitario, assistenza medica, ricostruzione dell'Ucraina, scienza
+            ed educazione.
+          </p>
+        </div>
+      </div>
+      <Explainer />
+    </>
   );
 }

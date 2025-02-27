@@ -1,0 +1,95 @@
+/* General Page Styling */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.heroSection {
+    background-color: #333333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.heroTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Contact Form Styling */
+.formContainer {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.input, .textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Submit Button */
+.submitButton {
+    background-color: #0070f3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submitButton:hover {
+    background-color: #005bb5;
+}
+
+/* Contact Info Section */
+.contactInfo {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F0F0F1;
+    border-radius: 10px;
+}
+
+.contactTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contactEmail {
+    font-size: 1.2rem;
+    color: #0070f3;
+    font-weight: bold;
+}

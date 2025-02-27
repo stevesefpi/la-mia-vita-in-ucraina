@@ -1,0 +1,37 @@
+import Link from "next/link";
+import { fetchPosts } from "@/lib/fetchPosts";
+
+import styles from "./page.module.css";
+
+export default async function BlogPage() {
+  const posts = await fetchPosts();
+
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Blog</h1>
+      <div className={styles.grid}>
+        {posts.length > 0 ? (
+          posts.map((post) => (
+            <Link
+              key={post.id}
+              href={`/blog/${post.id}`}
+              className={styles.card}
+            >
+              <div
+                className={styles.imageOverlay}
+                style={{ backgroundImage: `url(${post.cover_image})` }}
+              >
+                <div className={styles.textContainer}>
+                  <h2>{post.title}</h2>
+                  <span className={styles.readMore}>Leggi tutto »</span>
+                </div>
+              </div>
+            </Link>
+          ))
+        ) : (
+          <p>No blog posts found.</p>
+        )}
+      </div>
+    </div>
+  );
+}
