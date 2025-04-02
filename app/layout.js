@@ -4,12 +4,22 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "La Mia Vita in Ucraina",
-  description: "Racconti e storie per scoprire l'Ucraina, paese in cui vivo dal 2020.",
+  description:
+    "Racconti e storie per scoprire l'Ucraina, paese in cui vivo dal 2020.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={styles.mainWrapper}>
+      <head>
+        {/* ✅ Google Fonts here */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className={styles.bodyWrapper} suppressHydrationWarning>
         <div className={styles.pageContainer}>
           <Navbar />
@@ -20,4 +30,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

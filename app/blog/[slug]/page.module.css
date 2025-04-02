@@ -21,14 +21,15 @@
 .paragraphContainer {
     background: #F2F2F2;
     padding: 20px;
-    margin: 20px auto;
+    margin: 40px auto;
     border-radius: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 90vw;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* ✅ Ensures proper spacing between text and images */
+    gap: 15px; 
   }
   
   /* ✅ Paragraph Text */
@@ -38,7 +39,14 @@
     color: #333;
     font-family: "Arial", sans-serif;
     text-align: justify;
-    margin-bottom: 0; /* ✅ Removes default margin */
+    margin: 0; 
+    width: 100%;
+    padding: 0;
+  }
+
+  .paragraphTitle {
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   /* ✅ Image Wrapper Inside Paragraph */

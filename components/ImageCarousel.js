@@ -29,7 +29,7 @@ export default function ImageCarousel({ images }) {
           alt="Blog Image"
           className={styles.carouselImage}
           layout="fill"  
-          objectFit="cover" 
+          objectFit="contain" 
           priority
         />
       </div>

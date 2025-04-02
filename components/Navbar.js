@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       {/* Logo on the left */}
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="Logo" width={120} height={120} />
+        <Image src="/logo.png" alt="Logo" width={90} height={90} />
       </div>
 
       {/* Mobile Menu Button for Small Screens */}
@@ -86,10 +86,21 @@ export default function Navbar() {
           </ul>
 
           {/* Social Icons Inside Modal */}
-          {/* Social Icons Inside Modal */}
           <div className={styles.mobileSocial}>
-            <Facebook size={36} />
-            <Instagram size={36} />
+            <a
+              href="https://www.facebook.com/profile.php?id=61566181132367"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook size={36} stroke="#333" />
+            </a>
+            <a
+              href="https://instagram.com/lamiavitainucraina"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram size={36} stroke="#333" />
+            </a>
           </div>
         </MobileMenu>
       )}
@@ -137,9 +148,22 @@ export default function Navbar() {
       </ul>
       {/* Social Media Links */}
       <div className={styles.social}>
-        <Facebook />
-        <Instagram />
+        <a
+          href="https://www.facebook.com/profile.php?id=61566181132367"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Facebook stroke="#333"/>
+        </a>
+        <a
+          href="https://instagram.com/lamiavitainucraina"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram stroke="#333"/>
+        </a>
       </div>
     </nav>
   );
 }
+

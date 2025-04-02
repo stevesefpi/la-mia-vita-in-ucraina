@@ -13,7 +13,7 @@ export default function AboutPage() {
           <h1>Informazioni</h1>
           <p className={styles.heroParagraph}>
             Ciao! Mi chiamo Steven, sono un web developer e vivo in Ucraina dal
-            2020. Attraverso questo sito, desidero condividere le mie esperienze
+            2020. Attraverso questo blog, desidero condividere le mie esperienze
             personali e gli aneddoti di vita quotidiana in un paese che mi ha
             accolto e insegnato molto. Ogni storia è un piccolo frammento della
             realtà ucraina, raccontata attraverso i miei occhi.

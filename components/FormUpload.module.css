@@ -1,77 +1,118 @@
 .container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input,
+.textarea,
+.fileInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.fileInput {
+  border: none;
+}
+
+.paragraphContainer {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.button,
+.submitButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button {
+  background: #007bff;
+  color: white;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+.submitButton {
+  background: #28a745;
+  color: white;
+}
+
+.submitButton:hover {
+  background: #1e7e34;
+}
+
+/* Responsive styles for screens under 915px */
+@media (max-width: 915px) {
+  .carousel {
+    height: 250px; /* Reduce height for smaller screens */
   }
-  
-  .heading {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
+
+  .carouselImage {
+    object-fit: contain;
+    width: 100%; /* Make sure image fills width of the container */
+    height: auto;
   }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+  .arrow {
+    font-size: 20px;
+    padding: 8px;
   }
-  
-  .label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #555;
+
+  .leftArrow, .rightArrow {
+    top: 40%;
   }
-  
-  .input, .textarea, .fileInput {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+}
+
+/* For very small screens, like mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .carousel {
+    height: 200px; /* Further reduce the height for mobile */
   }
-  
-  .textarea {
-    height: 100px;
-    resize: vertical;
+
+  .arrow {
+    font-size: 18px;
+    padding: 6px;
   }
-  
-  .fileInput {
-    border: none;
+
+  .leftArrow, .rightArrow {
+    top: 30%;
   }
-  
-  .paragraphContainer {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  .button, .submitButton {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-  }
-  
-  .button {
-    background: #007bff;
-    color: white;
-  }
-  
-  .button:hover {
-    background: #0056b3;
-  }
-  
-  .submitButton {
-    background: #28a745;
-    color: white;
-  }
-  
-  .submitButton:hover {
-    background: #1e7e34;
-  }
+}

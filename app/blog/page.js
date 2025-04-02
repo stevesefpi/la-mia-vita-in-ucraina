@@ -4,7 +4,7 @@ import { fetchPosts } from "@/lib/fetchPosts";
 import styles from "./page.module.css";
 
 export default async function BlogPage() {
-  const posts = await fetchPosts();
+  const posts = (await fetchPosts()).reverse();
 
   return (
     <div className={styles.container}>
@@ -22,7 +22,7 @@ export default async function BlogPage() {
                 style={{ backgroundImage: `url(${post.cover_image})` }}
               >
                 <div className={styles.textContainer}>
-                  <h2>{post.title}</h2>
+                  <h2 className={styles.blogTitle}>{post.title}</h2>
                   <span className={styles.readMore}>Leggi tutto »</span>
                 </div>
               </div>

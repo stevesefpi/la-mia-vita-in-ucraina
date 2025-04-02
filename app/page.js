@@ -6,25 +6,34 @@ export default function HomePage() {
     <>
       <div className={styles.first}>
         <h1 className={styles.header}>Benvenuti nel mio blog</h1>
-        <p className={styles.text}>
-          Benvenuti nel mio spazio dedicato a raccontare storie autentiche e
-          personali sull’Ucraina. Vivo qui dal 2020 e attraverso questo blog
-          voglio condividere le mie esperienze, le sfide e le meraviglie di un
-          paese che ha cambiato profondamente la mia vita. Ogni racconto è un
-          tassello che tiene vivi i ricordi di momenti importanti, dalle
-          giornate quotidiane alla cucina locale, fino agli eventi storici che
-          hanno segnato la nazione. Unisciti a me in questo viaggio di scoperta
-          e memoria.
-        </p>
-        <p className={styles.text}>
-          Attraverso le storie che condividerò, spero di far emergere l’essenza
-          di questo paese: la sua resilienza, la gentilezza delle persone e la
-          bellezza della vita quotidiana. Ogni luogo ha una storia unica da
-          raccontare, e l’Ucraina ne è ricca. Qui, tra tradizioni radicate e
-          paesaggi affascinanti, la vita continua anche di fronte alle sfide. Il
-          mio obiettivo è condividere questi momenti, grandi e piccoli, che
-          rendono speciale la vita in questa terra.
-        </p>
+        <div className={styles.paragraphContainer}>
+          <p className={styles.text}>
+            Benvenuti nel mio spazio dedicato a raccontare storie autentiche e
+            personali sull’Ucraina. Vivo qui dal 2020 e attraverso questo blog
+            voglio condividere le mie esperienze, le sfide e le meraviglie di un
+            paese che ha cambiato profondamente la mia vita.
+          </p>
+
+          <p className={styles.text}>
+            Ogni racconto è un tassello che tiene vivi i ricordi di momenti
+            importanti, dalle giornate quotidiane alla cucina locale, fino agli
+            eventi storici che hanno segnato la nazione. Unisciti a me in questo
+            viaggio di scoperta e memoria.
+          </p>
+
+          <p className={styles.text}>
+            Attraverso le storie che condividerò, spero di far emergere
+            l’essenza di questo paese: la sua resilienza, la gentilezza delle
+            persone e la bellezza della vita quotidiana. Ogni luogo ha una
+            storia unica da raccontare, e l’Ucraina ne è ricca.
+          </p>
+          <p className={styles.text}>
+            Qui, tra tradizioni radicate e paesaggi affascinanti, la vita
+            continua anche di fronte alle sfide. Il mio obiettivo è condividere
+            questi momenti, grandi e piccoli, che rendono speciale la vita in
+            questa terra.
+          </p>
+        </div>
         <button className={styles.button_one}>Visita il mio blog</button>
       </div>
 
@@ -37,7 +46,7 @@ export default function HomePage() {
             creata dal governo ucraino nel maggio 2022, su iniziativa del
             presidente ucraino Volodymyr Zelensky
           </p>
-          <button className={styles.button_two}>Dona ora</button> 
+          <button className={styles.button_two}>Dona ora</button>
         </div>
         <div className={styles.column}>
           <h2 className={styles.infoBoxTitle}>

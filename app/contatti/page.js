@@ -15,7 +15,7 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ✅ Async function inside an event handler is allowed
+  // Async function inside an event handler is allowed
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
