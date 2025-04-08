@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import styles from "./navbar.module.css";
+import styles from "./Navbar.module.css";
 
 import { Facebook, Instagram, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
