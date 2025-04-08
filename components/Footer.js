@@ -12,8 +12,18 @@ export default function Footer() {
             <p>lamiavitainucraina@gmail.com</p>
           </div>
           <div className={styles.column}>
-            <Facebook />
-            <Instagram />
+            <a
+              className={styles.link}
+              href="https://www.facebook.com/profile.php?id=61566181132367"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><Facebook /></a>
+            <a
+            className={styles.link}
+              href="https://www.facebook.com/profile.php?id=61566181132367"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><Instagram /></a>
           </div>
         </div>
 

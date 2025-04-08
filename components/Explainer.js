@@ -28,7 +28,7 @@ export default function Explainer() {
 
   return (
     <div className={styles.flexContainer}>
-      <div className={styles.textColumn}>
+      <div data-aos="fade-right" className={styles.textColumn}>
         <h1 className={styles.header}>
           Scopri insieme a me il mondo e la cultura ucraini
         </h1>
@@ -46,7 +46,7 @@ export default function Explainer() {
         </p>
       </div>
 
-      <div className={styles.carouselColumn}>
+      <div data-aos="fade-left" className={styles.carouselColumn}>
         <div className={styles.carousel}>
           <button onClick={prevImage} className={styles.navButton}>‹</button>
           <Image

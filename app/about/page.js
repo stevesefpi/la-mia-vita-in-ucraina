@@ -34,9 +34,7 @@ export default function AboutPage() {
 
       <div className={styles.blackSection}>
         <p>
-          Questo spazio è dedicato a chi è curioso di scoprire un lato diverso
-          dell'Ucraina, lontano dagli stereotipi, ma ricco di umanità e
-          sorprese.
+          Questo spazio è dedicato a chi è curioso di scoprire un lato diverso dell'Ucraina, lontano dagli stereotipi, ma ricco di umanità e sorprese.
         </p>
       </div>
 

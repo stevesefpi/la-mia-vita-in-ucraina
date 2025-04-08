@@ -1,4 +1,5 @@
 .container {
+    background-color: #F0F0F1;
     max-width: 100vw;
     margin: auto;
     padding: 0;
@@ -47,18 +48,18 @@
 }
 
 .sectionOverlay {
-  position: relative;    
-  background-size: cover;
-  background-position: center;
-  height: 75vh;
-  padding: 100px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding-top: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-top: 0;
 }
 
 .sectionOverlay::before {
@@ -97,8 +98,8 @@
 .blackSection {
     background-color: #000000;
     color: white;
-    margin: 0;  
-    padding: 5rem 5rem;  
+    margin: 0;
+    padding: 5rem 5rem;
 }
 
 .blackSection p {
@@ -120,7 +121,7 @@
 .linkButton {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0070f3;
+    background-color: #57a0ff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -136,11 +137,13 @@
     width: 100%;
     background-color: #F0F0F1;
     padding: 40px 20px;
-    margin-top: 0; /* No space above */
+    margin-top: 0;
+    /* No space above */
 }
 
 .copyrightBackground {
-    max-width: 80%; /* Makes the paragraph take more width */
+    max-width: 80%;
+    /* Makes the paragraph take more width */
     margin: auto;
     padding: 20px;
 }
@@ -149,17 +152,41 @@
     font-size: 2rem;
     font-weight: bold;
     color: #333;
-    text-align: left; /* Left-aligned title */
+    text-align: left;
+    /* Left-aligned title */
 }
 
 .copyrightParagraph {
     font-size: 1.2rem;
     color: #555;
-    max-width: 100%; 
-    text-align: left; 
+    max-width: 100%;
+    text-align: left;
 }
 
 
 .linkButton:hover {
     background-color: #005bb5;
+    transform: scale(1.05); 
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+@media (max-width: 939px) {
+    .heroSection {
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .heroParagraph {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .heroText,
+    .heroParagraph {
+        padding: 0 10px;
+        font-size: 1rem;
+    }
 }

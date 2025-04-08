@@ -81,20 +81,22 @@
 }
 
 .text {
-    color: rgb(60, 67, 74);
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'Merriweather', serif;
+    line-height: 1.7;
+    color: #3c434a;
 }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
     .flexContainer {
         flex-direction: column;
+        align-items: center;
     }
 
     .textColumn,
     .carouselColumn {
-        width: 100%;
+        width: 90%;
     }
 
     .navButton {

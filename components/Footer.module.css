@@ -60,6 +60,9 @@
     padding-top: 15px;
 }
 
+.link {
+    color: inherit;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .footerMain {
