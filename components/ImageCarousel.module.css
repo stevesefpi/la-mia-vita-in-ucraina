@@ -1,3 +1,10 @@
+.carouselWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .carousel {
   position: relative;
   width: 800px;
@@ -51,7 +58,7 @@
 }
 
 /* Responsive styles for screens under 915px */
-@media (max-width: 915px) {
+@media (max-width: 939px) {
   .carousel {
     width: 75vw;
   }
@@ -73,11 +80,12 @@
 @media (max-width: 480px) {
 
   .carousel {
-    width: 75vw;
+    width: 90vw;
+    height: 60vw; /* Add this or set a specific height */
   }
 
   .carouselImage {
-    object-fit: fill;
+    object-fit: cover;
   }
 
   .arrow {
@@ -87,6 +95,6 @@
 
   .leftArrow,
   .rightArrow {
-    top: 30%;
+    top: 50%;
   }
 }

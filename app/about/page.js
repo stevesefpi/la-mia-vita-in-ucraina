@@ -1,7 +1,19 @@
+'use client';
+
 import styles from "./page.module.css";
 import Link from "next/link";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function AboutPage() {
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+    AOS.refresh();
+  }, []);
+
   return (
     <div className={styles.container}>
       <div
@@ -10,8 +22,8 @@ export default function AboutPage() {
       >
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroText}>
-          <h1>Informazioni</h1>
-          <p className={styles.heroParagraph}>
+          <h1 data-aos="zoom-in">Informazioni</h1>
+          <p data-aos="zoom-in" className={styles.heroParagraph}>
             Ciao! Mi chiamo Steven, sono un web developer e vivo in Ucraina dal
             2020. Attraverso questo blog, desidero condividere le mie esperienze
             personali e gli aneddoti di vita quotidiana in un paese che mi ha
@@ -22,8 +34,8 @@ export default function AboutPage() {
       </div>
 
       <div className={styles.sectionBox}>
-        <h2 className={styles.sectionTitle}>Obiettivi</h2>
-        <p className={styles.sectionParagraph}>
+        <h2 data-aos="zoom-in" className={styles.sectionTitle}>Obiettivi</h2>
+        <p data-aos="zoom-in" className={styles.sectionParagraph}>
           Il mio obiettivo principale è offrire uno sguardo autentico e
           personale sulla vita in Ucraina, raccontando storie che non sempre
           emergono nei media tradizionali. Voglio far conoscere la cultura, le
@@ -33,8 +45,10 @@ export default function AboutPage() {
       </div>
 
       <div className={styles.blackSection}>
-        <p>
-          Questo spazio è dedicato a chi è curioso di scoprire un lato diverso dell'Ucraina, lontano dagli stereotipi, ma ricco di umanità e sorprese.
+        <p data-aos="zoom-in">
+          Questo spazio è dedicato a chi è curioso di scoprire un lato diverso
+          dell'Ucraina, lontano dagli stereotipi, ma ricco di umanità e
+          sorprese.
         </p>
       </div>
 
@@ -44,13 +58,13 @@ export default function AboutPage() {
       >
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroText}>
-          <h2>Scopri il mio blog</h2>
-          <p className={styles.heroParagraph}>
+          <h2 data-aos="zoom-in">Scopri il mio blog</h2>
+          <p data-aos="zoom-in" className={styles.heroParagraph}>
             Immergiti nelle storie, esperienze e aneddoti dall'Ucraina. Inizia
             dalla prima pagina per capire meglio il mio percorso e lasciati
             ispirare dai racconti che ho raccolto.
           </p>
-          <Link href="/blog" className={styles.linkButton}>
+          <Link href="/blog" className={styles.linkButton} data-aos="zoom-in">
             Inizia qui
           </Link>
         </div>
@@ -58,8 +72,8 @@ export default function AboutPage() {
 
       <div className={styles.copyrightSection}>
         <div className={styles.copyrightBackground}>
-          <h2 className={styles.copyrightTitle}>Avviso di Copyright</h2>
-          <p className={styles.copyrightParagraph}>
+          <h2 data-aos="zoom-in" className={styles.copyrightTitle}>Avviso di Copyright</h2>
+          <p data-aos="zoom-in" className={styles.copyrightParagraph}>
             Tutte le immagini presenti su questo sito sono di proprietà
             esclusiva dell’autore e sono protette dalle leggi sul diritto
             d’autore. È vietato l’uso, la riproduzione o la distribuzione delle

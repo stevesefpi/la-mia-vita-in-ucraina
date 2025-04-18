@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={styles.mainWrapper}>
       <head>
-        {/* ✅ Google Fonts here */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

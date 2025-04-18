@@ -2,11 +2,14 @@
 
 import Explainer from "@/components/Explainer";
 import styles from "./page.module.css";
-import AOS from 'aos';
-import "aos/dist/aos.css";
+
 import { useEffect } from "react";
 
+import AOS from 'aos';
+import "aos/dist/aos.css";
+
 export default function HomePage() {
+
   useEffect(() => {
     AOS.init({ duration: 800, once: true});
     AOS.refresh();
@@ -56,7 +59,7 @@ export default function HomePage() {
             creata dal governo ucraino nel maggio 2022, su iniziativa del
             presidente ucraino Volodymyr Zelensky
           </p>
-          <button data-aos="zoom-in" className={styles.button_two}>Dona ora</button>
+          <button data-aos="zoom-in" className={styles.button_one}>Dona ora</button>
         </div>
         <div data-aos="fade-left" className={styles.column}>
           <h2 data-aos="zoom-in" className={styles.infoBoxTitle}>
