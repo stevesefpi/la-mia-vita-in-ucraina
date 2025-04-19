@@ -1,6 +1,9 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import Navbar from "@/components/Navbar";
-import styles from "./layout.module.css";
 import Footer from "@/components/Footer";
+
+import styles from "./layout.module.css";
 
 export const metadata = {
   title: "La Mia Vita in Ucraina",
@@ -25,6 +28,7 @@ export default function RootLayout({ children }) {
           <div className={styles.mainContent}>{children}</div>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
