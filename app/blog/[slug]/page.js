@@ -1,6 +1,39 @@
 import { fetchPost } from "@/lib/fetchPost";
+import { fetchPosts } from "@/lib/fetchPosts";
 import ImageCarousel from "@/components/ImageCarousel";
 import styles from "./page.module.css";
+
+export async function generateStaticParams() {
+  const posts = await fetchPosts();
+
+  return posts.map((post) => ({
+    slug: post.id, 
+  }));
+}
+
+export async function generateMetadata({params}) {
+  const { slug } = await params;
+  if (!slug) {
+    return {
+      title: "Blog - Storie dall'Ucraina",
+      description: "Scopri storie autentiche e personali dall'Ucraina.",
+    };
+  }
+
+  const post = await fetchPost(slug);
+
+  if (!post) {
+    return {
+      title: "Post non trovato",
+      description: "Il post che stai cercando non è disponibile.",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+  }
+}
 
 export default async function BlogPost({ params }) {
   const { slug } = await params;
@@ -27,9 +60,8 @@ export default async function BlogPost({ params }) {
 
       {Array.isArray(post.content) ? (
         post.content
-          .filter((block) => block.type === "text") // Only process text blocks
+          .filter((block) => block.type === "text") 
           .map((block, index) => {
-            // Correctly get images linked to this paragraph
             const paragraphImages = post.images?.filter(
               (img) => img.paragraph_index === index
             );

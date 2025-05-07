@@ -1,4 +1,3 @@
-/* General Page Styling */
 .container {
     max-width: 800px;
     margin: auto;
@@ -6,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Hero Section */
 .heroSection {
     background-color: #333333;
     color: white;
@@ -26,7 +24,6 @@
     opacity: 0.9;
 }
 
-/* Contact Form Styling */
 .formContainer {
     background: #f9f9f9;
     padding: 30px;
@@ -57,7 +54,6 @@
     resize: none;
 }
 
-/* Submit Button */
 .submitButton {
     background-color: #0070f3;
     color: white;
@@ -73,7 +69,6 @@
     background-color: #005bb5;
 }
 
-/* Contact Info Section */
 .contactInfo {
     text-align: center;
     margin-top: 20px;

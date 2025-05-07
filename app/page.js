@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
 import Explainer from "@/components/Explainer";
 import styles from "./page.module.css";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
-import AOS from 'aos';
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function HomePage() {
-
   useEffect(() => {
-    AOS.init({ duration: 800, once: true});
+    AOS.init({ duration: 800, once: true });
     AOS.refresh();
   }, []);
 
@@ -47,19 +47,29 @@ export default function HomePage() {
             questa terra.
           </p>
         </div>
-        <button data-aos="zoom-in" className={styles.button_one}>Visita il mio blog</button>
+        <Link className={styles.buttonLink} href="/blog">
+          <button data-aos="zoom-in" className={styles.button_one}>
+            Visita il mio blog
+          </button>
+        </Link>
       </div>
 
       <div data-aos="fade-right" className={styles.flexContainer}>
         <div className={styles.column}>
-          <h2 data-aos="zoom-in" className={styles.infoBoxTitle}>Supporta l'Ucraina</h2>
+          <h2 data-aos="zoom-in" className={styles.infoBoxTitle}>
+            Supporta l'Ucraina
+          </h2>
           <p data-aos="zoom-in" className={styles.text}>
             Per supportare l’Ucraina potete donare direttamente a{" "}
             <strong>United24</strong>, piattaforma ufficiale di raccolta fondi
             creata dal governo ucraino nel maggio 2022, su iniziativa del
             presidente ucraino Volodymyr Zelensky
           </p>
-          <button data-aos="zoom-in" className={styles.button_one}>Dona ora</button>
+          <Link className={styles.buttonLink} href="https://u24.gov.ua/">
+            <button data-aos="zoom-in" className={styles.button_two}>
+              Dona ora
+            </button>
+          </Link>
         </div>
         <div data-aos="fade-left" className={styles.column}>
           <h2 data-aos="zoom-in" className={styles.infoBoxTitle}>

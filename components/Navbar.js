@@ -32,7 +32,6 @@ export default function Navbar() {
         onClick={() => {
           setIsModalOpen(true);
         }}
-        // style={{ display: isModalOpen ? "none" : "block" }}
       >
         <Menu />
       </button>
