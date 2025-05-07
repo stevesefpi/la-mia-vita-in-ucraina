@@ -20,27 +20,27 @@ export default function HomePage() {
       <div className={styles.first}>
         <h1 className={styles.header}>Benvenuti nel mio blog</h1>
         <div className={styles.paragraphContainer}>
-          <p data-aos="zoom-in" className={styles.text}>
+          <p data-aos="zoom-in" className={`${styles.text} ${styles.heroText}`}>
             Benvenuti nel mio spazio dedicato a raccontare storie autentiche e
             personali sull’Ucraina. Vivo qui dal 2020 e attraverso questo blog
             voglio condividere le mie esperienze, le sfide e le meraviglie di un
             paese che ha cambiato profondamente la mia vita.
           </p>
 
-          <p data-aos="zoom-in" className={styles.text}>
+          <p data-aos="zoom-in" className={`${styles.text} ${styles.heroText}`}>
             Ogni racconto è un tassello che tiene vivi i ricordi di momenti
             importanti, dalle giornate quotidiane alla cucina locale, fino agli
             eventi storici che hanno segnato la nazione. Unisciti a me in questo
             viaggio di scoperta e memoria.
           </p>
 
-          <p data-aos="zoom-in" className={styles.text}>
+          <p data-aos="zoom-in" className={`${styles.text} ${styles.heroText}`}>
             Attraverso le storie che condividerò, spero di far emergere
             l’essenza di questo paese: la sua resilienza, la gentilezza delle
             persone e la bellezza della vita quotidiana. Ogni luogo ha una
             storia unica da raccontare, e l’Ucraina ne è ricca.
           </p>
-          <p data-aos="zoom-in" className={styles.text}>
+          <p data-aos="zoom-in" className={`${styles.text} ${styles.heroText}`}>
             Qui, tra tradizioni radicate e paesaggi affascinanti, la vita
             continua anche di fronte alle sfide. Il mio obiettivo è condividere
             questi momenti, grandi e piccoli, che rendono speciale la vita in
