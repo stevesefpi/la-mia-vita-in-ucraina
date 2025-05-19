@@ -1,4 +1,4 @@
-"use client"; // Ensure it's a client component
+"use client";
 
 import { useState } from "react";
 import styles from "./page.module.css";
@@ -15,7 +15,6 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Async function inside an event handler is allowed
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");

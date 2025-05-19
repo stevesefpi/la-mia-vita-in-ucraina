@@ -4,7 +4,7 @@ export default async function sitemap() {
   const posts = await fetchPosts();
 
   const postEntries = posts.map((post) => ({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/posts/${post.id}`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${post.id}`,
     lastModified: new Date(post.created_at).toISOString(),
   }));
 
