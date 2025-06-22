@@ -30,7 +30,7 @@ export default async function sitemap() {
       lastModified: new Date("2025-04-10T18:00:22Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/traduzione-intervista`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/guide/viaggio-ucraina`,
       lastModified: new Date("2025-06-22T14:17:19Z").toISOString(),
     },
     ...postEntries,
