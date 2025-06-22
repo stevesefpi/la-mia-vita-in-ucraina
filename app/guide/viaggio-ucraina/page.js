@@ -306,24 +306,56 @@ export default function Viaggio() {
           <h2>Contatti utili e app da installare</h2>
           <ul>
             <li>
-              <strong>Ferrovie ucraine:</strong> App <em>Ukrzaliznytsia</em>
+              <strong>Ferrovie ucraine:</strong> App <em>Ukrzaliznytsia</em> –{" "}
+              <a
+                className={styles.link}
+                href="https://apps.apple.com/ua/app/ukrainian-railways/id1626073366"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                iPhone
+              </a>{" "}
+              |{" "}
+              <a
+                className={styles.link}
+                href="https://play.google.com/store/apps/details?id=ua.gov.uz&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Android
+              </a>
             </li>
             <li>
-              <strong>Allarmi aerei:</strong>{" "}
+              <strong>Allarmi aerei:</strong> App <em>Повітряна тривога</em> –{" "}
               <a
                 className={styles.link}
                 href="https://apps.apple.com/ua/app/%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%80%D1%8F%D0%BD%D0%B0-%D1%82%D1%80%D0%B8%D0%B2%D0%BE%D0%B3%D0%B0/id1611955391"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                App <em>Повітряна тривога</em>
+                iPhone
               </a>{" "}
-              (selezionare regione corretta: Kyiv città ≠ Kyiv oblast)
+              |{" "}
+              <a
+                className={styles.link}
+                href="https://play.google.com/store/apps/details?id=com.ukrainealarm&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Android
+              </a>{" "}
             </li>
             <li>Gruppi Telegram locali con avvisi in tempo reale</li>
             <li>
               <strong>
                 Solo in caso di emergenza, Ambasciata italiana a Kyiv:
               </strong>{" "}
-              <a href="https://ambkiev.esteri.it" className={styles.link}>
+              <a
+                href="https://ambkiev.esteri.it"
+                className={styles.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 ambkiev.esteri.it
               </a>
             </li>

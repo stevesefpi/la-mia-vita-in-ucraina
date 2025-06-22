@@ -125,7 +125,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .container {
     background-color: #121212;
     color: #ddd;
@@ -143,4 +143,4 @@
   .link {
     color: #88caff;
   }
-}
+} */

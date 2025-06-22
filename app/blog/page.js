@@ -31,7 +31,6 @@ export default async function BlogPage() {
               >
                 <div className={styles.textContainer}>
                   <h2 className={styles.blogTitle}>{post.title}</h2>
-                  <span className={styles.readMore}>Leggi tutto »</span>
                 </div>
               </div>
             </Link>
