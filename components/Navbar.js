@@ -68,7 +68,7 @@ export default function Navbar() {
                 }
                 onClick={() => setIsModalOpen(false)}
               >
-                About
+                Info
               </Link>
             </li>
             <li>
@@ -128,10 +128,12 @@ export default function Navbar() {
           <Link
             href="/about"
             className={
-              activePath.startsWith("/about") ? styles.active : undefined
+              activePath.startsWith("/about") || activePath.startsWith("/guide")
+                ? styles.active
+                : undefined
             }
           >
-            About
+            Info
           </Link>
         </li>
         <li>
@@ -152,17 +154,16 @@ export default function Navbar() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Facebook stroke="#333"/>
+          <Facebook stroke="#333" />
         </a>
         <a
           href="https://instagram.com/lamiavitainucraina"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Instagram stroke="#333"/>
+          <Instagram stroke="#333" />
         </a>
       </div>
     </nav>
   );
 }
-

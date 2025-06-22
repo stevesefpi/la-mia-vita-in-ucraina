@@ -1,0 +1,146 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: system-ui, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-style: italic;
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.cover {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  object-fit: cover;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.4rem;
+}
+
+.content h3 {
+  font-size: 1.4rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.content p {
+  margin: 1rem 0;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.content th,
+.content td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.content th {
+  background-color: #f7f7f7;
+}
+
+.content img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  display: block;
+}
+
+.figure {
+  margin: 0;
+}
+
+.link {
+  color: #7eb6ff; 
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #143074; 
+}
+
+.figureImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 500px; 
+  margin: 0 auto;
+  display: block;
+}
+
+.figureCaption {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #121212;
+    color: #ddd;
+  }
+
+  .content th,
+  .content td {
+    border-color: #444;
+  }
+
+  .content th {
+    background-color: #1e1e1e;
+  }
+
+  .link {
+    color: #88caff;
+  }
+}
