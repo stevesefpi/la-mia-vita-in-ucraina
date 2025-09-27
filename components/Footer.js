@@ -1,14 +1,18 @@
 import styles from "./Footer.module.css";
 import { Facebook, Instagram, Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+
+  const t = useTranslations('Footer');
+
   return (
     <>
       <div className={styles.footerContainer}>
         <div className={styles.footerMain}>
           <div className={styles.column}>
-            <h2>La Mia Vita in Ucraina</h2>
-            <h3>Contattami</h3>
+            <h2>{t('name')}</h2>
+            <h3>{t('contact')}</h3>
             <p>lamiavitainucraina@gmail.com</p>
           </div>
           <div className={styles.column}>

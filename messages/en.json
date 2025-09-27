@@ -1,0 +1,56 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog",
+    "info": "About",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "title": "Welcome to my blog",
+    "intro_one": "Welcome to a space dedicated to telling authentic and personal stories about Ukraine. I've been living here for the past five years, and through this blog I want to share my experiences, challenges, and wonders of a country that has profoundly changed my life.",
+    "intro_two": "Each story keeps alive the memories of important moments, from everyday life to local cuisine, to the historical events that shaped the Ukrainian nation. Join me on this journey.",
+    "intro_three": "Through the stories I share, I hope to bring out the essence of this country: its resilience, the kindness of its people, and the beauty of everyday life. Every place has a unique story to tell, and Ukraine is rich in them.",
+    "intro_four": "Here, amidst deep-rooted traditions and captivating landscapes, life continues, even in the face of challenges. My goal is to share these moments, both large and small, that make life here special.",
+    "visit_button": "Check my blog",
+    "donate_button": "Donate now",
+    "donate_title": "Support Ukraine",
+    "donate_text": "To support Ukraine, you can donate directly to <b>United24</b>, the official fundraising platform created by the Ukrainian government in May 2022, on the initiative of Ukrainian President Volodymyr Zelensky.",
+    "funds_title": "How United24 uses the funds",
+    "funds_text": "The donations collected through the platform are allocated to five sectors, which you can choose from on the website: defense, humanitarian demining, medical assistance, reconstruction of Ukraine, science and education."
+  },
+  "Explainer": {
+    "title": "Discover Ukraine with me",
+    "text": "Experiences, stories and reflections from a country that has changed my life"
+  },
+  "Info": {
+    "title": "The project",
+    "intro": "Hello! My name is Steven, and I’m an Italian web developer who has been living in Ukraine for the past five years. Through this blog, I share my personal experiences and everyday stories of life in a country that has both welcomed me and taught me so much. Each post is a glimpse into Ukrainian reality, seen and felt through my own eyes.",
+    "guide_title": "Guides",
+    "guide_text": "Discover how to travel to Ukraine during the conflict and much more: useful tips, itineraries, documentation, and safety advice. The guides are based on direct personal experiences.",
+    "guide_button": "Guides",
+    "objectives_title": "My objectives",
+    "objectives_text": "My main goal is to offer an authentic and personal look at life in Ukraine. I want to highlight the culture, challenges, and resilience of the Ukrainian people through everyday anecdotes, personal experiences, and reflections.",
+    "space": "This space is for anyone curious to discover a different side of Ukraine. A side far from stereotypes, yet full of humanity and unexpected stories.",
+    "discover_title": "Visit my blog",
+    "discover_text": "Dive into stories, experiences, and anecdotes from Ukraine. Start from the very first post to better understand my journey, and let yourself be inspired by the tales I’ve gathered along the way.",
+    "discover_button": "Start here",
+    "copyright_title": "Copyright Notice",
+    "copyright_text": "All images on this website are the exclusive property of the author and are protected by copyright law. Any use, reproduction, or distribution of these images without the author’s explicit permission is strictly prohibited. However, you may use the images provided that proper credit is given, including the author’s name (La Mia Vita in Ucraina) and a link to the website (lamiavitainucraina.com)."
+  },
+  "Contact": {
+    "title": "Contact me",
+    "text": "If my stories have sparked your curiosity and you’d like to know more, or for any other reason, feel free to send me a message using the form below or write to me by email.",
+    "name": "Name",
+    "name_placeholder": "Your name",
+    "email": "Email",
+    "email_placeholder": "Your email address",
+    "message": "Message",
+    "message_placeholder": "Write your message here",
+    "send_button": "Send",
+    "contact_email": "My email"
+  },
+  "Footer": {
+    "name": "My Life in Ukraine",
+    "contact": "Contact me"
+  }
+}

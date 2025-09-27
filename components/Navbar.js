@@ -1,19 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "src/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 
 import styles from "./Navbar.module.css";
 
 import { Facebook, Instagram, Menu, X } from "lucide-react";
+
 import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const path = usePathname();
   const [activePath, setActivePath] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const locale = useLocale();
+  const t = useTranslations("Navbar");
+
+  const logoImage = locale === "en" ? "/en_logo.png" : "/it_logo.png";
 
   useEffect(() => {
     setActivePath(path);
@@ -23,7 +29,9 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       {/* Logo on the left */}
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="Logo" width={90} height={90} />
+        <Link href="/" aria-label="Home">
+          <Image src={logoImage} alt="Logo" width={90} height={90} />
+        </Link>
       </div>
 
       {/* Mobile Menu Button for Small Screens */}
@@ -46,7 +54,7 @@ export default function Navbar() {
                 className={activePath === "/" ? styles.active : undefined}
                 onClick={() => setIsModalOpen(false)}
               >
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
@@ -57,7 +65,7 @@ export default function Navbar() {
                 }
                 onClick={() => setIsModalOpen(false)}
               >
-                Blog
+                {t("blog")}
               </Link>
             </li>
             <li>
@@ -68,7 +76,7 @@ export default function Navbar() {
                 }
                 onClick={() => setIsModalOpen(false)}
               >
-                Info
+                {t("info")}
               </Link>
             </li>
             <li>
@@ -79,27 +87,14 @@ export default function Navbar() {
                 }
                 onClick={() => setIsModalOpen(false)}
               >
-                Contatti
+                {t("contact")}
               </Link>
             </li>
           </ul>
 
           {/* Social Icons Inside Modal */}
           <div className={styles.mobileSocial}>
-            <a
-              href="https://www.facebook.com/profile.php?id=61566181132367"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Facebook size={36} stroke="#333" />
-            </a>
-            <a
-              href="https://instagram.com/lamiavitainucraina"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram size={36} stroke="#333" />
-            </a>
+            <LanguageSwitcher />
           </div>
         </MobileMenu>
       )}
@@ -111,7 +106,7 @@ export default function Navbar() {
             href="/"
             className={activePath === "/" ? styles.active : undefined}
           >
-            Home
+            {t("home")}
           </Link>
         </li>
         <li>
@@ -121,7 +116,7 @@ export default function Navbar() {
               activePath.startsWith("/blog") ? styles.active : undefined
             }
           >
-            Blog
+            {t("blog")}
           </Link>
         </li>
         <li>
@@ -133,7 +128,7 @@ export default function Navbar() {
                 : undefined
             }
           >
-            Info
+            {t("info")}
           </Link>
         </li>
         <li>
@@ -143,26 +138,13 @@ export default function Navbar() {
               activePath.startsWith("/contatti") ? styles.active : undefined
             }
           >
-            Contatti
+            {t("contact")}
           </Link>
         </li>
       </ul>
       {/* Social Media Links */}
-      <div className={styles.social}>
-        <a
-          href="https://www.facebook.com/profile.php?id=61566181132367"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Facebook stroke="#333" />
-        </a>
-        <a
-          href="https://instagram.com/lamiavitainucraina"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Instagram stroke="#333" />
-        </a>
+      <div className={styles.languages}>
+        <LanguageSwitcher />
       </div>
     </nav>
   );

@@ -6,7 +6,7 @@
     background-color: #F5F4ED;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-  
+
 .logo img {
     cursor: pointer;
 }
@@ -47,17 +47,17 @@
     color: #333;
 }
 
-.social {
+.languages {
     display: flex;
     gap: 1rem;
 }
 
-.social img {
+.languages img {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
-.social img:hover {
+.languages img:hover {
     transform: scale(1.1);
 }
 
@@ -94,13 +94,13 @@
     .menuToggle {
         display: block;
         z-index: 10;
-      }
+    }
 
     .menuOpen {
         display: flex;
     }
 
-    .social {
+    .languages {
         display: none;
     }
 
@@ -137,10 +137,11 @@
 
     .mobileSocial {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
         gap: 1.5rem;
         width: 100%;
+        margin-top: 2rem;
     }
 }

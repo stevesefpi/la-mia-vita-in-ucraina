@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import styles from "./page.module.css";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations('Contact');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,21 +44,19 @@ export default function ContactPage() {
   return (
     <div className={styles.container}>
       <div className={styles.heroSection}>
-        <h1 className={styles.heroTitle}>Contattami</h1>
-        <p className={styles.heroSubtitle}>
-          Se le mie storie ti hanno incuriosito e vuoi saperne di più, o per qualsiasi altro motivo, puoi inviarmi un messaggio tramite il modulo qui sotto o scrivermi via email.
-        </p>
+        <h1 className={styles.heroTitle}>{t('title')}</h1>
+        <p className={styles.heroSubtitle}>{t('text')}</p>
       </div>
 
       <div className={styles.formContainer}>
         <form className={styles.contactForm} onSubmit={handleSubmit}>
           <label className={styles.label}>
-            Nome
+            {t('name')}
             <input
               type="text"
               name="name"
               className={styles.input}
-              placeholder="Il tuo nome"
+              placeholder={t('name_placeholder')}
               value={formData.name}
               onChange={handleChange}
               required
@@ -64,12 +64,12 @@ export default function ContactPage() {
           </label>
 
           <label className={styles.label}>
-            Email
+            {t('email')}
             <input
               type="email"
               name="email"
               className={styles.input}
-              placeholder="Il tuo indirizzo email"
+              placeholder={t('email_placeholder')}
               value={formData.email}
               onChange={handleChange}
               required
@@ -77,18 +77,18 @@ export default function ContactPage() {
           </label>
 
           <label className={styles.label}>
-            Messaggio
+            {t('message')}
             <textarea
               name="message"
               className={styles.textarea}
-              placeholder="Scrivi il tuo messaggio"
+              placeholder={t('message_placeholder')}
               value={formData.message}
               onChange={handleChange}
               required
             />
           </label>
 
-          <button type="submit" className={styles.submitButton}>Invia</button>
+          <button type="submit" className={styles.submitButton}>{t('send_button')}</button>
         </form>
 
         {status === "sending" && <p>Invio in corso...</p>}
@@ -97,7 +97,7 @@ export default function ContactPage() {
       </div>
 
       <div className={styles.contactInfo}>
-        <h2 className={styles.contactTitle}>Email di contatto</h2>
+        <h2 className={styles.contactTitle}>{t('contact_email')}</h2>
         <p className={styles.contactEmail}>lamiavitainucraina@gmail.com</p>
       </div>
     </div>

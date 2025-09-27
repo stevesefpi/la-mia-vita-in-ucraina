@@ -1,51 +1,49 @@
-import { fetchPost } from "@/lib/fetchPost";
-import { fetchPosts } from "@/lib/fetchPosts";
-import ImageCarousel from "@/components/ImageCarousel";
+import { fetchPost } from "lib/fetchPost";
+import { fetchPosts } from "lib/fetchPosts";
+import ImageCarousel from "components/ImageCarousel";
 import styles from "./page.module.css";
 
 export async function generateStaticParams() {
-  const posts = await fetchPosts();
+  const locales = ["it", "en"];
+  let allParams = [];
 
-  return posts.map((post) => ({
-    slug: post.id, 
-  }));
-}
-
-export async function generateMetadata({params}) {
-  const { slug } = await params;
-  if (!slug) {
-    return {
-      title: "Blog - Storie dall'Ucraina",
-      description: "Scopri storie autentiche e personali dall'Ucraina.",
-    };
+  for (const locale of locales) {
+    const posts = await fetchPosts(locale);
+    allParams = allParams.concat(
+      posts.map((post) => ({
+        locale,
+        slug: post.id,
+      }))
+    );
   }
 
-  const post = await fetchPost(slug);
+  return allParams;
+}
+
+export async function generateMetadata({ params }) {
+  const { locale, slug } = await params;
+
+  const post = await fetchPost(locale, slug);
 
   if (!post) {
     return {
-      title: "Post non trovato",
-      description: "Il post che stai cercando non è disponibile.",
+      title: "Post not found",
+      description: "The post you are looking for is not available.",
     };
   }
 
   return {
     title: post.title,
     description: post.description,
-  }
+  };
 }
 
 export default async function BlogPost({ params }) {
-  const { slug } = await params;
-
-  if (!slug) {
-    return <h1>Invalid Post</h1>;
-  }
-
-  const post = await fetchPost(slug);
+  const { locale, slug } = await params;
+  const post = await fetchPost(locale, slug);
 
   if (!post) {
-    return <h1>Post not found</h1>;
+    return <h1>Invalid Post</h1>;
   }
 
   return (
@@ -60,7 +58,7 @@ export default async function BlogPost({ params }) {
 
       {Array.isArray(post.content) ? (
         post.content
-          .filter((block) => block.type === "text") 
+          .filter((block) => block.type === "text")
           .map((block, index) => {
             const paragraphImages = post.images?.filter(
               (img) => img.paragraph_index === index
@@ -73,8 +71,10 @@ export default async function BlogPost({ params }) {
                   <h3 className={styles.paragraphTitle}>{block.title}</h3>
                 )}
                 {/* <p className={styles.paragraph}>{block.content}</p> */}
-                {block.content.split('\n').map((line, idx) => (
-                  <p key={idx} className={styles.paragraph}>{line}</p>
+                {block.content.split("\n").map((line, idx) => (
+                  <p key={idx} className={styles.paragraph}>
+                    {line}
+                  </p>
                 ))}
                 {/* Only Render Images If They Exist */}
                 {paragraphImages && paragraphImages.length > 0 ? (

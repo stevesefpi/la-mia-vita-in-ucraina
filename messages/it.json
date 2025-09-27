@@ -1,0 +1,56 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog",
+    "info": "Info",
+    "contact": "Contatti"
+  },
+  "HomePage": {
+    "title": "Benvenuti nel mio blog",
+    "intro_one": "Benvenuti nel mio spazio dedicato a raccontare storie autentiche e personali sull’Ucraina. Vivo qui da cinque anni e attraverso questo blog voglio condividere le mie esperienze, le sfide e le meraviglie di un paese che ha cambiato profondamente la mia vita.",
+    "intro_two": "Ogni racconto è un tassello che tiene vivi i ricordi di momenti importanti, dalle giornate quotidiane alla cucina locale, fino agli eventi storici che hanno segnato la nazione. Unisciti a me in questo viaggio di scoperta e memoria.",
+    "intro_three": "Attraverso le storie che condividerò, spero di far emergere l’essenza di questo paese: la sua resilienza, la gentilezza delle persone e la bellezza della vita quotidiana. Ogni luogo ha una storia unica da raccontare, e l’Ucraina ne è ricca.",
+    "intro_four": "Qui, tra tradizioni radicate e paesaggi affascinanti, la vita continua anche di fronte alle sfide. Il mio obiettivo è condividere questi momenti, grandi e piccoli, che rendono speciale la vita in questa terra.",
+    "visit_button": "Visita il mio blog",
+    "donate_button": "Dona ora",
+    "donate_title": "Supporta l'Ucraina",
+    "donate_text": "Per supportare l’Ucraina potete donare direttamente a <b>United24</b>, piattaforma ufficiale di raccolta fondi creata dal governo ucraino nel maggio 2022, su iniziativa del presidente ucraino Volodymyr Zelensky",
+    "funds_title": "Come United24 utilizza i fondi",
+    "funds_text": "Le donazioni raccolte tramite la piattaforma sono destinate a cinque settori, che potrete scegliere dal sito: difesa, sminamento umanitario, assistenza medica, ricostruzione dell'Ucraina, scienza ed educazione."
+  },
+  "Explainer": {
+    "title": "Scopri l'Ucraina insieme a me",
+    "text": "Esperienze, storie e riflessioni da un paese che ha cambiato la mia vita"
+  },
+  "Info": {
+    "title": "Informazioni",
+    "intro": "Ciao! Mi chiamo Steven, sono un web developer e vivo in Ucraina da 5 anni. Attraverso questo blog, desidero condividere le mie esperienze personali e gli aneddoti di vita quotidiana in un paese che mi ha accolto e insegnato molto. Ogni storia è un piccolo frammento della realtà ucraina, raccontata attraverso i miei occhi.",
+    "guide_title": "Guide",
+    "guide_text": "Scopri come viaggiare in Ucraina durante il conflitto e molto altro: consigli utili, itinerari, documentazione e sicurezza. Le guide sono basate su esperienze personali dirette.",
+    "guide_button": "Guide",
+    "objectives_title": "Obiettivi",
+    "objectives_text": "Il mio obiettivo principale è offrire uno sguardo autentico e personale sulla vita in Ucraina, raccontando storie che non sempre emergono nei media tradizionali. Voglio far conoscere la cultura, le sfide e la resilienza del popolo ucraino attraverso aneddoti quotidiani, esperienze personali e riflessioni.",
+    "space": "Questo spazio è dedicato a chi è curioso di scoprire un lato diverso dell'Ucraina, lontano dagli stereotipi, ma ricco di umanità e sorprese.",
+    "discover_title": "Scopri il mio blog",
+    "discover_text": "Immergiti nelle storie, esperienze e aneddoti dall'Ucraina. Inizia dalla prima pagina per capire meglio il mio percorso e lasciati ispirare dai racconti che ho raccolto.",
+    "discover_button": "Inizia qui",
+    "copyright_title": "Avviso di Copyright",
+    "copyright_text": "Tutte le immagini presenti su questo sito sono di proprietà esclusiva dell’autore e sono protette dalle leggi sul diritto d’autore. È vietato l’uso, la riproduzione o la distribuzione delle immagini senza il permesso esplicito dell’autore. Tuttavia, è possibile utilizzare le immagini a condizione che venga fornito il credito appropriato, includendo il nome dell’autore (La Mia Vita in Ucraina) e un link al sito web (lamiavitainucraina.com)."
+  },
+    "Contact": {
+    "title": "Contattami",
+    "text": "Se le mie storie ti hanno incuriosito e vuoi saperne di più, o per qualsiasi altro motivo, puoi inviarmi un messaggio tramite il modulo qui sotto o scrivermi via email.",
+    "name": "Nome",
+    "name_placeholder": "Il tuo nome",
+    "email": "Email",
+    "email_placeholder": "Il tuo indirizzo email",
+    "message": "Messaggio",
+    "message_placeholder": "Scrivi qui il tuo messaggio",
+    "send_button": "Invia",
+    "contact_email": "Email di contatto"
+  },
+  "Footer": {
+    "name": "La Mia Vita in Ucraina",
+    "contact": "Contattami"
+  }
+}
