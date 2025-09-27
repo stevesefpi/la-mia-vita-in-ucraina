@@ -42,7 +42,7 @@ export default async function LocaleLayout({ children, params }) {
     notFound();
   }
 
-  const messages = await getMessages();
+  const messages = (await import(`messages/${locale}.json`)).default;
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
