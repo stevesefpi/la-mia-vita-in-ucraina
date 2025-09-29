@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 
-import Link from "next/link";
+import { Link } from "@/src/i18n/routing";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

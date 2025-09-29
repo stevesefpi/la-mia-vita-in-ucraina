@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 
-import { Link } from "@/src/i18n/navigation";
+import { Link } from "@/src/i18n/routing";
 import { fetchPosts } from "lib/fetchPosts";
 
 import styles from "./page.module.css";

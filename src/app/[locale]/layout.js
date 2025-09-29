@@ -45,13 +45,17 @@ export default async function LocaleLayout({ children, params }) {
   const messages = (await import(`messages/${locale}.json`)).default;
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className={styles.pageContainer}>
-        <Navbar />
-        <div className={styles.mainContent}>{children}</div>
-        <Footer />
-      </div>
-      <Analytics />
-    </NextIntlClientProvider>
+    <html lang={locale} className={styles.mainWrapper}>
+      <body className={styles.bodyWrapper} suppressHydrationWarning>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <div className={styles.pageContainer}>
+            <Navbar />
+            <div className={styles.mainContent}>{children}</div>
+            <Footer />
+          </div>
+          <Analytics />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
