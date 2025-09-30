@@ -19,8 +19,6 @@ export default function Navbar() {
   const locale = useLocale();
   const t = useTranslations("Navbar");
 
-  const logoImage = locale === "en" ? "/en_logo.png" : "/it_logo.png";
-
   useEffect(() => {
     setActivePath(path);
   }, [path]);
@@ -30,7 +28,7 @@ export default function Navbar() {
       {/* Logo on the left */}
       <div className={styles.logo}>
         <Link href="/" aria-label="Home">
-          <Image src={logoImage} alt="Logo" width={90} height={90} />
+          <Image src="/logo.png" alt="Logo" fill className={styles.logoImage}/>
         </Link>
       </div>
 

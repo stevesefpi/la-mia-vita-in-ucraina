@@ -1,18 +1,18 @@
 import styles from "./Footer.module.css";
-import { Facebook, Instagram, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Footer() {
-
-  const t = useTranslations('Footer');
+  const t = useTranslations("Footer");
 
   return (
     <>
       <div className={styles.footerContainer}>
         <div className={styles.footerMain}>
           <div className={styles.column}>
-            <h2>{t('name')}</h2>
-            <h3>{t('contact')}</h3>
+            <h2>{t("name")}</h2>
+            <h3>{t("contact")}</h3>
             <p>lamiavitainucraina@gmail.com</p>
           </div>
           <div className={styles.column}>
@@ -21,19 +21,30 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=61566181132367"
               target="_blank"
               rel="noopener noreferrer"
-            ><Facebook /></a>
+            >
+              <Facebook />
+            </a>
             <a
-            className={styles.link}
+              className={styles.link}
               href="https://www.facebook.com/profile.php?id=61566181132367"
               target="_blank"
               rel="noopener noreferrer"
-            ><Instagram /></a>
+            >
+              <Instagram />
+            </a>
+            <a
+              className={styles.link}
+              href="https://x.com/mylifeinukraine"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter />
+            </a>
           </div>
         </div>
 
         <div className={styles.footerBottom}>
-          Copyright © 2025 La Mia Vita In Ucraina | Powered by La Mia Vita In
-          Ucraina
+          Copyright © 2025 My Life in Ukraine
         </div>
       </div>
     </>
