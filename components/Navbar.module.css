@@ -8,9 +8,9 @@
 }
 
 .logo {
-  position: relative;
-  width: 220px;   
-  height: 60px;    
+  width: 150px;   
+  height: 61px; 
+  position: relative;   
   display: flex;
   align-items: center;
 }
