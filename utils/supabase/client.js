@@ -7,3 +7,4 @@ const supabaseClient = createBrowserClient(
 export function createClient() {
   return supabaseClient;
 }
+

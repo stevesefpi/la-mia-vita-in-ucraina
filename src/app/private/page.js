@@ -10,9 +10,6 @@ export default async function PrivatePage() {
   if (error || !data?.user) {
     redirect('/login')
   }
-  console.log(data);
-
-
 
   return (
     <>
@@ -20,5 +17,5 @@ export default async function PrivatePage() {
         <FormUpload user={data.user} />
     </>
   )
- 
 }
+
