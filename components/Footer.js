@@ -25,7 +25,7 @@ export default function Footer() {
             </a>
             <a
               className={styles.link}
-              href="https://www.facebook.com/profile.php?id=61566181132367"
+              href="https://www.instagram.com/lamiavitainucraina/"
               target="_blank"
               rel="noopener noreferrer"
             >
