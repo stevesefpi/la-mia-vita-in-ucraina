@@ -1,7 +1,6 @@
 import styles from "./Footer.module.css";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -44,7 +43,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          Copyright © 2025 My Life in Ukraine
+          Copyright © 2026 My Life in Ukraine
         </div>
       </div>
     </>
