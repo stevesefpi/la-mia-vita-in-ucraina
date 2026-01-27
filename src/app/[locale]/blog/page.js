@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPage({ params }) {
   const { locale } = await params;
-  const posts = (await fetchPosts(locale)).reverse();
+  const posts = (await fetchPosts(locale));
 
   return (
     <div className={styles.container}>
