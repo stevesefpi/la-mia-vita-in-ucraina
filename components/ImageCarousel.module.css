@@ -19,6 +19,15 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.carouselLeft {
+  left: 10px; 
+}
+
+.carouselRight {
+  right: 10px;
+}
+
+
 .imageContainer {
   position: relative;
   width: 100%;
@@ -29,7 +38,6 @@
 
 .carouselImage {
   object-fit: contain;
-  border-radius: inherit;
 }
 
 .arrow {
@@ -49,6 +57,26 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
+.carouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s ease;
+}
+
+.carouselArrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .leftArrow {
   left: 10px;
 }
@@ -57,17 +85,98 @@
   right: 10px;
 }
 
-/* Responsive styles for screens under 915px */
+.imageButton {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+/* Modal for images */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.modalContent {
+  position: relative;
+  width: min(1100px, 96vw);
+  height: min(80vh, 720px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.modalImageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.modalImage {
+  object-fit: contain;
+}
+
+.modalClose {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.modalArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.modalImageWrap,
+.modalClose,
+.modalArrow {
+  pointer-events: auto;
+}
+
+.modalLeft {
+  left: -10px;
+}
+
+.modalRight {
+  right: -10px;
+}
+
 @media (max-width: 939px) {
   .carousel {
-    width: 75vw;
-  }
-
-  .carouselImage {
-    object-fit: cover;
-    width: 100%;
-    /* Make sure image fills width of the container */
-    height: auto;
+    width: 92vw;
+    height: 58vw; 
+    max-height: 420px;
   }
 
   .arrow {
@@ -76,25 +185,16 @@
   }
 }
 
-/* For very small screens, like mobile (max-width: 480px) */
+/* For very small screens */
+
 @media (max-width: 480px) {
-
   .carousel {
-    width: 90vw;
-    height: 60vw; /* Add this or set a specific height */
-  }
-
-  .carouselImage {
-    object-fit: cover;
+    padding: 0 52px; 
+    box-sizing: border-box;
   }
 
   .arrow {
     font-size: 18px;
     padding: 6px;
-  }
-
-  .leftArrow,
-  .rightArrow {
-    top: 50%;
   }
 }
