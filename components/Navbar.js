@@ -14,12 +14,10 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const path = usePathname();
-  const [activePath, setActivePath] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const t = useTranslations("Navbar");
 
   useEffect(() => {
-    setActivePath(path);
     setIsModalOpen(false);
   }, [path]);
 
@@ -49,7 +47,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/"
-                className={activePath === "/" ? styles.active : undefined}
+                className={path === "/" ? styles.active : undefined}
               >
                 {t("home")}
               </Link>
@@ -58,7 +56,7 @@ export default function Navbar() {
               <Link
                 href="/blog"
                 className={
-                  activePath.startsWith("/blog") ? styles.active : undefined
+                  path.startsWith("/blog") ? styles.active : undefined
                 }
               >
                 {t("blog")}
@@ -68,7 +66,7 @@ export default function Navbar() {
               <Link
                 href="/about"
                 className={
-                  activePath.startsWith("/about") ? styles.active : undefined
+                  path.startsWith("/about") ? styles.active : undefined
                 }
               >
                 {t("info")}
@@ -78,7 +76,7 @@ export default function Navbar() {
               <Link
                 href="/contatti"
                 className={
-                  activePath.startsWith("/contatti") ? styles.active : undefined
+                  path.startsWith("/contatti") ? styles.active : undefined
                 }
               >
                 {t("contact")}
@@ -98,7 +96,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/"
-            className={activePath === "/" ? styles.active : undefined}
+            className={path === "/" ? styles.active : undefined}
           >
             {t("home")}
           </Link>
@@ -107,7 +105,7 @@ export default function Navbar() {
           <Link
             href="/blog"
             className={
-              activePath.startsWith("/blog") ? styles.active : undefined
+              path.startsWith("/blog") ? styles.active : undefined
             }
           >
             {t("blog")}
@@ -117,7 +115,7 @@ export default function Navbar() {
           <Link
             href="/about"
             className={
-              activePath.startsWith("/about") || activePath.startsWith("/guide")
+              path.startsWith("/about") || path.startsWith("/guide")
                 ? styles.active
                 : undefined
             }
@@ -129,7 +127,7 @@ export default function Navbar() {
           <Link
             href="/contatti"
             className={
-              activePath.startsWith("/contatti") ? styles.active : undefined
+              path.startsWith("/contatti") ? styles.active : undefined
             }
           >
             {t("contact")}
