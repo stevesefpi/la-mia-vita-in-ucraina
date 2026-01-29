@@ -20,6 +20,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setActivePath(path);
+    setIsModalOpen(false);
   }, [path]);
 
   return (
@@ -49,7 +50,6 @@ export default function Navbar() {
               <Link
                 href="/"
                 className={activePath === "/" ? styles.active : undefined}
-                onClick={() => setIsModalOpen(false)}
               >
                 {t("home")}
               </Link>
@@ -60,7 +60,6 @@ export default function Navbar() {
                 className={
                   activePath.startsWith("/blog") ? styles.active : undefined
                 }
-                onClick={() => setIsModalOpen(false)}
               >
                 {t("blog")}
               </Link>
@@ -71,7 +70,6 @@ export default function Navbar() {
                 className={
                   activePath.startsWith("/about") ? styles.active : undefined
                 }
-                onClick={() => setIsModalOpen(false)}
               >
                 {t("info")}
               </Link>
@@ -82,7 +80,6 @@ export default function Navbar() {
                 className={
                   activePath.startsWith("/contatti") ? styles.active : undefined
                 }
-                onClick={() => setIsModalOpen(false)}
               >
                 {t("contact")}
               </Link>
