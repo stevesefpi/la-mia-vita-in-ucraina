@@ -62,7 +62,7 @@
     color: inherit;
 }
 
-@media (max-width: 939px) {
+@media (max-width: 1100px) {
     .footerMain {
         flex-direction: column;
         text-align: center;

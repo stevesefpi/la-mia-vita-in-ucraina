@@ -79,15 +79,14 @@
   background: #1e7e34;
 }
 
-/* Responsive styles for screens under 915px */
-@media (max-width: 915px) {
+@media (max-width: 1100px) {
   .carousel {
-    height: 250px; /* Reduce height for smaller screens */
+    height: 250px;
   }
 
   .carouselImage {
     object-fit: contain;
-    width: 100%; /* Make sure image fills width of the container */
+    width: 100%; 
     height: auto;
   }
 
@@ -101,10 +100,9 @@
   }
 }
 
-/* For very small screens, like mobile (max-width: 480px) */
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .carousel {
-    height: 200px; /* Further reduce the height for mobile */
+    height: 200px; 
   }
 
   .arrow {

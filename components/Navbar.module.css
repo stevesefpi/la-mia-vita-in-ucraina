@@ -77,7 +77,7 @@
     display: none;
 }
 
-@media (max-width: 939px) {
+@media (max-width: 1100px) {
     .navbar {
         padding: 1rem 1.5rem;
         justify-content: space-between;
