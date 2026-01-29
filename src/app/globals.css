@@ -1,3 +1,9 @@
+:root {
+  --screen-xs: 23.4375rem;   /* 375px */
+  --screen-sm: 28.125rem;    /* 450px */
+  --screen-md: 58.75rem;     /* 940px */
+}
+
 @font-face {
   font-family: 'Roboto';
   src: url('/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
