@@ -23,20 +23,20 @@ export async function POST(req) {
     const mailOptions = {
       from: email,
       to: process.env.EMAIL_USER,
-      subject: `Nuovo messaggio da ${name}`,
-      text: `Nome: ${name}\nEmail: ${email}\nMessaggio:\n${message}`,
+      subject: `New message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
     };
 
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
-      { message: "Email inviata con successo!" },
+      { message: "Message sent succesfully!" },
       { status: 200 }
     );
   } catch (error) {
     console.error("Server error:", error);
     return NextResponse.json(
-      { message: "Errore nel server, riprova più tardi" },
+      { message: "Server error, try again later..." },
       { status: 500 }
     );
   }
