@@ -1,14 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Link, usePathname } from "src/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import styles from "./Navbar.module.css";
 
-import { Facebook, Instagram, Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
-import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -16,7 +16,6 @@ export default function Navbar() {
   const path = usePathname();
   const [activePath, setActivePath] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const locale = useLocale();
   const t = useTranslations("Navbar");
 
   useEffect(() => {
