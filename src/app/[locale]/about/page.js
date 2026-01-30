@@ -1,21 +1,10 @@
-"use client";
-
 import styles from "./page.module.css";
 import { Link } from "@/src/i18n/routing";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+export default async function AboutPage() {
 
-export default function AboutPage() {
-
-  const t = useTranslations("Info");
-  
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-    AOS.refresh();
-  }, []);
+  const t = await getTranslations("Info");
 
   return (
     <div className={styles.container}>
@@ -27,22 +16,21 @@ export default function AboutPage() {
         <div className={styles.row}>
           <div className={styles.column}>
             <div className={styles.heroText}>
-              <h1 data-aos="zoom-in">{t("title")}</h1>
-              <p data-aos="zoom-in" className={styles.heroParagraph}>
+              <h1>{t("title")}</h1>
+              <p className={styles.heroParagraph}>
                 {t("intro")}
               </p>
             </div>
           </div>
           <div className={styles.column}>
             <div className={styles.heroText}>
-              <h1 data-aos="zoom-in">{t("guide_title")}</h1>
-              <p data-aos="zoom-in" className={styles.heroParagraph}>
+              <h1>{t("guide_title")}</h1>
+              <p className={styles.heroParagraph}>
                 {t("guide_text")}
               </p>
               <Link
                 href="/guide"
                 className={styles.linkButton}
-                data-aos="zoom-in"
               >
                 {t("guide_button")}
               </Link>
@@ -52,16 +40,16 @@ export default function AboutPage() {
       </div>
 
       <div className={styles.sectionBox}>
-        <h2 data-aos="zoom-in" className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle}>
           {t("objectives_title")}
         </h2>
-        <p data-aos="zoom-in" className={styles.sectionParagraph}>
+        <p className={styles.sectionParagraph}>
           {t("objectives_text")}
         </p>
       </div>
 
       <div className={styles.blackSection}>
-        <p data-aos="zoom-in">{t("space")}</p>
+        <p>{t("space")}</p>
       </div>
 
       <div
@@ -70,11 +58,11 @@ export default function AboutPage() {
       >
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroText}>
-          <h2 data-aos="zoom-in">{t("discover_title")}</h2>
-          <p data-aos="zoom-in" className={styles.heroParagraph}>
+          <h2>{t("discover_title")}</h2>
+          <p className={styles.heroParagraph}>
             {t("discover_text")}
           </p>
-          <Link href="/blog" className={styles.linkButton} data-aos="zoom-in">
+          <Link href="/blog" className={styles.linkButton}>
             {t("discover_button")}
           </Link>
         </div>
@@ -82,8 +70,8 @@ export default function AboutPage() {
 
       <div className={styles.copyrightSection}>
         <div className={styles.copyrightBackground}>
-          <h2 data-aos="zoom-in" className={styles.copyrightTitle}>{t("copyright_title")}</h2>
-          <p data-aos="zoom-in" className={styles.copyrightParagraph}>{t('copyright_text')}</p>
+          <h2 className={styles.copyrightTitle}>{t("copyright_title")}</h2>
+          <p className={styles.copyrightParagraph}>{t('copyright_text')}</p>
         </div>
       </div>
     </div>
