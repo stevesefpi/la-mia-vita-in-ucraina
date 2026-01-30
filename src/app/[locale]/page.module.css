@@ -105,7 +105,7 @@
 }
 
 .flexContainer .column {
-    margin: 0;
+    margin: calc(40 / 16 * 1rem);
     max-width: 25%;
     min-height: 350px;
     border-radius: 20px;
