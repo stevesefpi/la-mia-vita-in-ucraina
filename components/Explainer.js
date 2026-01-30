@@ -1,10 +1,8 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import styles from "./Explainer.module.css";
 
-export default function Explainer() {
-  const t = useTranslations('Explainer');
+export default async function Explainer() {
+  const t = await getTranslations('Explainer');
   return (
     <section className={styles.hero}>
       <h1 className={styles.title}>{t('title')}</h1>
