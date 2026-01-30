@@ -1,143 +1,62 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Link, usePathname } from "src/i18n/routing";
-import { useTranslations } from "next-intl";
+import { Link } from "src/i18n/routing";
+import { getTranslations } from "next-intl/server";
 
 import styles from "./Navbar.module.css";
-
-import { Menu } from "lucide-react";
-
-import MobileMenu from "./MobileMenu";
+import NavbarClient from "./client_side/NavbarClient";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-export default function Navbar() {
-  const path = usePathname();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const t = useTranslations("Navbar");
-
-  useEffect(() => {
-    setIsModalOpen(false);
-  }, [path]);
+export default async function Navbar() {
+  const t = await getTranslations("Navbar");
 
   return (
     <nav className={styles.navbar}>
-      {/* Logo on the left */}
+      {/* Logo */}
       <div className={styles.logo}>
         <Link href="/" aria-label="Home">
-          <Image src="/logo.png" alt="Logo" fill className={styles.logoImage}/>
+          {/* IMPORTANT: reserve space to reduce CLS */}
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={150}
+            height={61}
+            priority
+            className={styles.logoImage}
+          />
         </Link>
       </div>
 
-      {/* Mobile Menu Button for Small Screens */}
-      <button
-        className={styles.menuToggle}
-        onClick={() => {
-          setIsModalOpen(true);
+      {/* Client-only: hamburger + modal */}
+      <NavbarClient
+        labels={{
+          home: t("home"),
+          blog: t("blog"),
+          info: t("info"),
+          contact: t("contact"),
         }}
-      >
-        <Menu />
-      </button>
+      />
 
-      {isModalOpen && (
-        <MobileMenu isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          {/* Navigation Links Inside Modal */}
-          <ul className={styles.mobileMenu}>
-            <li>
-              <Link
-                href="/"
-                className={path === "/" ? styles.active : undefined}
-              >
-                {t("home")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className={
-                  path.startsWith("/blog") ? styles.active : undefined
-                }
-              >
-                {t("blog")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className={
-                  path.startsWith("/about") ? styles.active : undefined
-                }
-              >
-                {t("info")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contatti"
-                className={
-                  path.startsWith("/contatti") ? styles.active : undefined
-                }
-              >
-                {t("contact")}
-              </Link>
-            </li>
-          </ul>
-
-          {/* Social Icons Inside Modal */}
-          <div className={styles.mobileSocial}>
-            <LanguageSwitcher />
-          </div>
-        </MobileMenu>
-      )}
-
-      {/* Navigation Menu */}
+      {/* Desktop links (server-rendered) */}
       <ul className={styles.menu}>
         <li>
-          <Link
-            href="/"
-            className={path === "/" ? styles.active : undefined}
-          >
-            {t("home")}
-          </Link>
+          <Link href="/">{t("home")}</Link>
         </li>
         <li>
-          <Link
-            href="/blog"
-            className={
-              path.startsWith("/blog") ? styles.active : undefined
-            }
-          >
-            {t("blog")}
-          </Link>
+          <Link href="/blog">{t("blog")}</Link>
         </li>
         <li>
-          <Link
-            href="/about"
-            className={
-              path.startsWith("/about") || path.startsWith("/guide")
-                ? styles.active
-                : undefined
-            }
-          >
-            {t("info")}
-          </Link>
+          <Link href="/about">{t("info")}</Link>
         </li>
         <li>
-          <Link
-            href="/contatti"
-            className={
-              path.startsWith("/contatti") ? styles.active : undefined
-            }
-          >
-            {t("contact")}
-          </Link>
+          <Link href="/contatti">{t("contact")}</Link>
         </li>
       </ul>
-      {/* Social Media Links */}
+
+      {/* Language switcher (can stay client if it needs interactivity) */}
       <div className={styles.languages}>
         <LanguageSwitcher />
       </div>
     </nav>
   );
 }
+

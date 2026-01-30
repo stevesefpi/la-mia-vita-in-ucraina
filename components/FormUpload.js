@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
 import { createPost } from "@/lib/createPost";
 import { uploadImage } from "@/lib/uploadImage";
 import styles from "./FormUpload.module.css";
