@@ -1,5 +1,5 @@
 import Explainer from "components/Explainer";
-
+import { greatVibes } from "@/src/app/fonts";
 import styles from "./page.module.css";
 
 import { getTranslations } from "next-intl/server";
@@ -10,7 +10,7 @@ export default async function HomePage() {
   const t = await getTranslations('HomePage');
 
   return (
-    <>
+    <div className={greatVibes.variable}>
       <div className={styles.first}>
         <h1 className={styles.header}>{t('title')}</h1>
         <div className={styles.paragraphContainer}>
@@ -62,6 +62,6 @@ export default async function HomePage() {
         </div>
       </div>
       <Explainer />
-    </>
+    </div>
   );
 }

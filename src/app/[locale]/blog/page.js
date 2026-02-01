@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 import { Link } from "@/src/i18n/routing";
 import { fetchPosts } from "lib/fetchPosts";
 
+import { greatVibes } from "../../fonts";
 import styles from "./page.module.css";
 
 export async function generateMetadata({ params }) {
@@ -11,24 +12,25 @@ export async function generateMetadata({ params }) {
   if (locale === "en") {
     return {
       title: "Blog",
-      description: "Discover all the blog posts: personal experiences, daily stories, and reflections on life in Ukraine.",
+      description:
+        "Discover all the blog posts: personal experiences, daily stories, and reflections on life in Ukraine.",
     };
   }
 
   return {
     title: "Blog",
-    description:"Scopri tutti gli articoli del blog: esperienze personali, storie quotidiane e riflessioni sulla vita in Ucraina.",
+    description:
+      "Scopri tutti gli articoli del blog: esperienze personali, storie quotidiane e riflessioni sulla vita in Ucraina.",
   };
 }
 
-
 export default async function BlogPage({ params }) {
   const { locale } = await params;
-  const posts = (await fetchPosts(locale));
+  const posts = await fetchPosts(locale);
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Blog</h1>
+      <h1 className={`${styles.heading} ${greatVibes.variable}`}>Blog</h1>
       <div className={styles.grid}>
         {posts.length > 0 ? (
           posts.map((post) => (
@@ -54,4 +56,3 @@ export default async function BlogPage({ params }) {
     </div>
   );
 }
-

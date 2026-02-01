@@ -6,7 +6,7 @@
 }
 
 .heading {
-  font-family: "Great Vibes", cursive;
+  font-family: var(--font-greatvibes), cursive;
   font-size: 3rem;
   color: #313c4d;
   margin-bottom: 30px;

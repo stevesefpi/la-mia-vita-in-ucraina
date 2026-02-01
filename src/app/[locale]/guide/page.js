@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { greatVibes } from "../../fonts";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -9,7 +10,7 @@ export const metadata = {
 export default function GuidePage() {
   return (
     <>
-      <h1 className={styles.heading}>Guide</h1>
+      <h1 className={`${styles.heading} ${greatVibes.variable}`}>Guide</h1>
       <div className={styles.container}>
         <div className={styles.grid}>
           <Link href="/guide/viaggio-ucraina" className={styles.card}>
