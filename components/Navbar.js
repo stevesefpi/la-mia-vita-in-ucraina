@@ -14,7 +14,6 @@ export default async function Navbar() {
       {/* Logo */}
       <div className={styles.logo}>
         <Link href="/" aria-label="Home">
-          {/* IMPORTANT: reserve space to reduce CLS */}
           <Image
             src="/logo.png"
             alt="Logo"
@@ -26,7 +25,6 @@ export default async function Navbar() {
         </Link>
       </div>
 
-      {/* Client-only: hamburger + modal */}
       <NavbarClient
         labels={{
           home: t("home"),
@@ -36,7 +34,6 @@ export default async function Navbar() {
         }}
       />
 
-      {/* Desktop links (server-rendered) */}
       <ul className={styles.menu}>
         <li>
           <Link href="/">{t("home")}</Link>
@@ -52,7 +49,6 @@ export default async function Navbar() {
         </li>
       </ul>
 
-      {/* Language switcher (can stay client if it needs interactivity) */}
       <div className={styles.languages}>
         <LanguageSwitcher />
       </div>

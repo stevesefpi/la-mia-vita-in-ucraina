@@ -6,11 +6,11 @@ import { useLocale } from "next-intl";
 import { Link, usePathname } from "src/i18n/routing";
 import { routing } from "src/i18n/routing";
 import styles from "./LanguageSwitcher.module.css";
-import "flag-icons/css/flag-icons.min.css";
+import Image from "next/image";
 
-const FLAG_CLASS = {
-  it: "fi fi-it",
-  en: "fi fi-us",
+const FLAG_SRC = {
+  it: "/icons/it.svg",
+  en: "/icons/us.svg",
 };
 
 export default function LanguageSwitcher({ className }) {
@@ -48,7 +48,16 @@ export default function LanguageSwitcher({ className }) {
         onClick={() => setOpen((o) => !o)}
       >
         <span className={styles.code}>{label}</span>
-        <span className={FLAG_CLASS[locale]} />
+
+        <Image
+          src={FLAG_SRC[locale]}
+          alt=""
+          width={18}
+          height={14}
+          className={styles.flagImg}
+          aria-hidden
+        />
+
         <ChevronDown className={styles.caret} size={16} aria-hidden />
       </button>
 
@@ -64,8 +73,12 @@ export default function LanguageSwitcher({ className }) {
                 onClick={() => setOpen(false)}
               >
                 {l.toUpperCase()}
-                <span
-                  className={`${FLAG_CLASS[l]} ${styles.flag}`}
+                <Image
+                  src={FLAG_SRC[l]}
+                  alt=""
+                  width={18}
+                  height={14}
+                  className={styles.flagImg}
                   aria-hidden
                 />
               </Link>
