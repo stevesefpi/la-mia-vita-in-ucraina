@@ -1,10 +1,8 @@
-export const dynamic = "force-dynamic";
-
-import { Link } from "@/src/i18n/routing";
-import { fetchPosts } from "lib/fetchPosts";
-
+import { setRequestLocale } from "next-intl/server";
 import { greatVibes } from "../../fonts";
+
 import styles from "./page.module.css";
+import BlogGrid from "./BlogGrid";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -26,33 +24,12 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPage({ params }) {
   const { locale } = await params;
-  const posts = await fetchPosts(locale);
+  setRequestLocale(locale);
 
   return (
     <div className={styles.container}>
       <h1 className={`${styles.heading} ${greatVibes.variable}`}>Blog</h1>
-      <div className={styles.grid}>
-        {posts.length > 0 ? (
-          posts.map((post) => (
-            <Link
-              key={post.id}
-              href={`/blog/${post.id}`}
-              className={styles.card}
-            >
-              <div
-                className={styles.imageOverlay}
-                style={{ backgroundImage: `url(${post.cover_image})` }}
-              >
-                <div className={styles.textContainer}>
-                  <h2 className={styles.blogTitle}>{post.title}</h2>
-                </div>
-              </div>
-            </Link>
-          ))
-        ) : (
-          <p>No blog posts found.</p>
-        )}
-      </div>
+      <BlogGrid locale={locale} />
     </div>
   );
 }

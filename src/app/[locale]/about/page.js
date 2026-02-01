@@ -1,10 +1,16 @@
+import { cacheLife } from "next/cache";
+
 import styles from "./page.module.css";
-import { Link } from "@/src/i18n/routing";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
-export default async function AboutPage() {
+export default async function AboutPage({ params }) {
+  "use cache";
 
-  const t = await getTranslations("Info");
+  cacheLife("days");
+  
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Info" });
 
   return (
     <div className={styles.container}>
@@ -17,21 +23,14 @@ export default async function AboutPage() {
           <div className={styles.column}>
             <div className={styles.heroText}>
               <h1>{t("title")}</h1>
-              <p className={styles.heroParagraph}>
-                {t("intro")}
-              </p>
+              <p className={styles.heroParagraph}>{t("intro")}</p>
             </div>
           </div>
           <div className={styles.column}>
             <div className={styles.heroText}>
               <h1>{t("guide_title")}</h1>
-              <p className={styles.heroParagraph}>
-                {t("guide_text")}
-              </p>
-              <Link
-                href="/guide"
-                className={styles.linkButton}
-              >
+              <p className={styles.heroParagraph}>{t("guide_text")}</p>
+              <Link href={`/${locale}/guide`} className={styles.linkButton}>
                 {t("guide_button")}
               </Link>
             </div>
@@ -40,12 +39,8 @@ export default async function AboutPage() {
       </div>
 
       <div className={styles.sectionBox}>
-        <h2 className={styles.sectionTitle}>
-          {t("objectives_title")}
-        </h2>
-        <p className={styles.sectionParagraph}>
-          {t("objectives_text")}
-        </p>
+        <h2 className={styles.sectionTitle}>{t("objectives_title")}</h2>
+        <p className={styles.sectionParagraph}>{t("objectives_text")}</p>
       </div>
 
       <div className={styles.blackSection}>
@@ -59,9 +54,7 @@ export default async function AboutPage() {
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroText}>
           <h2>{t("discover_title")}</h2>
-          <p className={styles.heroParagraph}>
-            {t("discover_text")}
-          </p>
+          <p className={styles.heroParagraph}>{t("discover_text")}</p>
           <Link href="/blog" className={styles.linkButton}>
             {t("discover_button")}
           </Link>
@@ -71,7 +64,7 @@ export default async function AboutPage() {
       <div className={styles.copyrightSection}>
         <div className={styles.copyrightBackground}>
           <h2 className={styles.copyrightTitle}>{t("copyright_title")}</h2>
-          <p className={styles.copyrightParagraph}>{t('copyright_text')}</p>
+          <p className={styles.copyrightParagraph}>{t("copyright_text")}</p>
         </div>
       </div>
     </div>

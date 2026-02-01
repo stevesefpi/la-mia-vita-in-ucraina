@@ -1,12 +1,9 @@
 import './globals.css';
-import {getLocale} from "next-intl/server";
 import { roboto, poppins } from './fonts';
 
-
-export default async function RootLayout({children}) {
-  const locale = await getLocale();
+export default function RootLayout({ children }) {
   return (
-    <html lang={locale} className={`${roboto.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${poppins.variable}`}>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );

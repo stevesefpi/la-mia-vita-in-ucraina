@@ -1,11 +1,17 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/src/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 
 import { Analytics } from "@vercel/analytics/react";
+import HtmlLangSetter from "./HtmlLangSetter";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import styles from "./layout.module.css";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -41,16 +47,21 @@ export default async function LocaleLayout({ children, params }) {
     notFound();
   }
 
+  setRequestLocale(locale);
+
   const messages = (await import(`messages/${locale}.json`)).default;
 
   return (
-  <NextIntlClientProvider locale={locale} messages={messages}>
-    <div className={styles.pageContainer}>
-      <Navbar />
-      <div className={styles.mainContent}>{children}</div>
-      <Footer />
-    </div>
-    <Analytics />
-  </NextIntlClientProvider>
-);
+    <>
+      <HtmlLangSetter locale={locale} />
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <div className={styles.pageContainer}>
+          <Navbar />
+          <div className={styles.mainContent}>{children}</div>
+          <Footer />
+        </div>
+        <Analytics />
+      </NextIntlClientProvider>
+    </>
+  );
 }

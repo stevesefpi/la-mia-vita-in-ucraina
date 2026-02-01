@@ -1,7 +1,8 @@
-import { fetchPost } from "lib/fetchPost";
+import { getCachedPost } from "@/lib/cachedPost";
 import { fetchPosts } from "lib/fetchPosts";
 import ImageCarousel from "components/ImageCarousel";
 import styles from "./page.module.css";
+import { setRequestLocale } from "next-intl/server";
 
 export async function generateStaticParams() {
   const locales = ["it", "en"];
@@ -23,7 +24,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
 
-  const post = await fetchPost(locale, slug);
+  const post = await getCachedPost(locale, slug);
 
   if (!post) {
     return {
@@ -40,7 +41,8 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPost({ params }) {
   const { locale, slug } = await params;
-  const post = await fetchPost(locale, slug);
+  setRequestLocale(locale);
+  const post = await getCachedPost(locale, slug);
 
   if (!post) {
     return <h1>Invalid Post</h1>;
