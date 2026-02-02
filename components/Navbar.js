@@ -5,9 +5,17 @@ import { getTranslations } from "next-intl/server";
 import styles from "./Navbar.module.css";
 import NavbarClient from "./client_side/NavbarClient";
 import LanguageSwitcher from "./LanguageSwitcher";
+import DesktopMenu from "./client_side/DesktopMenu";
 
 export default async function Navbar() {
   const t = await getTranslations("Navbar");
+
+  const labels = {
+    home: t("home"),
+    blog: t("blog"),
+    info: t("info"),
+    contact: t("contact"),
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -25,29 +33,9 @@ export default async function Navbar() {
         </Link>
       </div>
 
-      <NavbarClient
-        labels={{
-          home: t("home"),
-          blog: t("blog"),
-          info: t("info"),
-          contact: t("contact"),
-        }}
-      />
+      <NavbarClient labels={labels} />
 
-      <ul className={styles.menu}>
-        <li>
-          <Link href="/">{t("home")}</Link>
-        </li>
-        <li>
-          <Link href="/blog">{t("blog")}</Link>
-        </li>
-        <li>
-          <Link href="/about">{t("info")}</Link>
-        </li>
-        <li>
-          <Link href="/contatti">{t("contact")}</Link>
-        </li>
-      </ul>
+      <DesktopMenu labels={labels} />
 
       <div className={styles.languages}>
         <LanguageSwitcher />
