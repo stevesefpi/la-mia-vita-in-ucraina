@@ -28,6 +28,7 @@ export default function Hero({ title, subtitle }) {
         alt="Carpathian Mountains in Ukraine"
         fill
         priority
+        fetchPriority='high'
         sizes="100vw"
         className={styles.heroImage}
       />
