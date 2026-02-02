@@ -6,6 +6,7 @@ export default async function BlogGrid({ locale }) {
   "use cache";
 
   const posts = await fetchPosts(locale);
+  
   return (
     <div className={styles.grid}>
       {posts.length > 0 ? (
