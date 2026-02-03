@@ -25,7 +25,7 @@ export default function Footer() {
             </a>
             <a
               className={styles.link}
-              href="https://www.instagram.com/mylifeinukraine"
+              href="https://www.instagram.com/mylifeinukraine/"
               target="_blank"
               rel="noopener noreferrer"
             >
