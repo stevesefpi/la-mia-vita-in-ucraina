@@ -6,6 +6,8 @@
     "contact": "Contatti"
   },
   "HomePage": {
+    "hero_title": "Scopri l'Ucraina insieme a me",
+    "hero_text": "Esperienze, storie e riflessioni da un paese che ha cambiato la mia vita",
     "title": "Benvenuti nel mio blog",
     "intro_one": "Benvenuti nel mio spazio dedicato a raccontare storie autentiche e personali sull’Ucraina. Vivo qui da cinque anni e attraverso questo blog voglio condividere le mie esperienze, le sfide e le meraviglie di un paese che ha cambiato profondamente la mia vita.",
     "intro_two": "Ogni racconto è un tassello che tiene vivi i ricordi di momenti importanti, dalle giornate quotidiane alla cucina locale, fino agli eventi storici che hanno segnato la nazione. Unisciti a me in questo viaggio di scoperta e memoria.",
@@ -17,10 +19,6 @@
     "donate_text": "Per supportare l’Ucraina potete donare direttamente a <b>United24</b>, piattaforma ufficiale di raccolta fondi creata dal governo ucraino nel maggio 2022, su iniziativa del presidente ucraino Volodymyr Zelensky",
     "funds_title": "Come United24 utilizza i fondi",
     "funds_text": "Le donazioni raccolte tramite la piattaforma sono destinate a cinque settori, che potrete scegliere dal sito: difesa, sminamento umanitario, assistenza medica, ricostruzione dell'Ucraina, scienza ed educazione."
-  },
-  "Explainer": {
-    "title": "Scopri l'Ucraina insieme a me",
-    "text": "Esperienze, storie e riflessioni da un paese che ha cambiato la mia vita"
   },
   "Info": {
     "title": "Informazioni",

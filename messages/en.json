@@ -6,6 +6,8 @@
     "contact": "Contact"
   },
   "HomePage": {
+    "hero_title": "Discover Ukraine with me",
+    "hero_text": "Experiences, stories and reflections from a country that has changed my life",
     "title": "Welcome to my blog",
     "intro_one": "Welcome to a space dedicated to telling authentic and personal stories about Ukraine. I've been living here for the past five years, and through this blog I want to share my experiences, challenges, and wonders of a country that has profoundly changed my life.",
     "intro_two": "Each story keeps alive the memories of important moments, from everyday life to local cuisine, to the historical events that shaped the Ukrainian nation. Join me on this journey.",
@@ -17,10 +19,6 @@
     "donate_text": "To support Ukraine, you can donate directly to <b>United24</b>, the official fundraising platform created by the Ukrainian government in May 2022, on the initiative of Ukrainian President Volodymyr Zelensky.",
     "funds_title": "How United24 uses the funds",
     "funds_text": "The donations collected through the platform are allocated to five sectors, which you can choose from on the website: defense, humanitarian demining, medical assistance, reconstruction of Ukraine, science and education."
-  },
-  "Explainer": {
-    "title": "Discover Ukraine with me",
-    "text": "Experiences, stories and reflections from a country that has changed my life"
   },
   "Info": {
     "title": "The project",

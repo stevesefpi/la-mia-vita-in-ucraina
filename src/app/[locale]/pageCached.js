@@ -9,11 +9,10 @@ export default async function HomeCached({ locale }) {
   "use cache";
 
   const t = await getTranslations({ locale, namespace: "HomePage" });
-  const e = await getTranslations({ locale, namespace: "Explainer" });
 
   return (
     <div className={greatVibes.variable}>
-      <Hero title={e("title")} subtitle={e("text")} />
+      <Hero title={t("hero_title")} subtitle={t("hero_text")} />
 
       <div className={styles.first}>
         <h1 className={styles.header}>{t("title")}</h1>
