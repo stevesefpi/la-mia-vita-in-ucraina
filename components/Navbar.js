@@ -3,9 +3,9 @@ import { Link } from "src/i18n/routing";
 import { getTranslations } from "next-intl/server";
 
 import styles from "./Navbar.module.css";
-import NavbarClient from "./client_side/NavbarClient";
+import NavbarMobile from "./client_side/NavbarMobile";
 import LanguageSwitcher from "./LanguageSwitcher";
-import DesktopMenu from "./client_side/DesktopMenu";
+import NavbarDesktop from "./client_side/NavbarDesktop";
 
 export default async function Navbar() {
   const t = await getTranslations("Navbar");
@@ -33,9 +33,9 @@ export default async function Navbar() {
         </Link>
       </div>
 
-      <NavbarClient labels={labels} />
+      <NavbarMobile labels={labels} />
 
-      <DesktopMenu labels={labels} />
+      <NavbarDesktop labels={labels} />
 
       <div className={styles.languages}>
         <LanguageSwitcher />
