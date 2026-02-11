@@ -1,7 +1,7 @@
-import { fetchPosts } from "@/lib/fetchPosts";
+import { fetchAllPosts } from "@/lib/fetchPosts";
 
 export default async function sitemap() {
-  const posts = await fetchPosts();
+  const posts = await fetchAllPosts();
 
   const postEntries = posts.flatMap((post) => [
     {

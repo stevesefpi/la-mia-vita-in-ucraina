@@ -23,16 +23,3 @@ export const poppins = localFont({
   display: "swap",
   variable: "--font-poppins",
 });
-
-export const greatVibes = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Great_Vibes/GreatVibes-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  display: "swap",
-  variable: "--font-greatvibes",
-  preload: false, 
-});

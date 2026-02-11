@@ -1,8 +1,14 @@
 .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 40px;
     max-width: 1400px;
+    box-sizing: border-box;
+    width: 100%;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .heading {
@@ -14,25 +20,43 @@
 .blogTitle {
     color: #f7d793;
     font-size: 2rem;
-    margin-bottom: 0;
+    margin-bottom: 4px;
+}
+
+.blogDate {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
 }
 
 
 .grid {
+    flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: center;
-    align-items: start;
 }
 
 .card {
     display: block;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
     text-decoration: none;
-    height: 250px;
+    min-height: 300px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        flex: unset;
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .card {
+        max-height: 250px;
+    }
 }
 
 .imageOverlay {
@@ -79,7 +103,7 @@
 }
 
 .heading {
-    font-family: var(--font-greatvibes), cursive;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 3rem;
     color: #313c4d;
     margin-bottom: 30px;
@@ -99,4 +123,40 @@
         transform: scale(1);
         opacity: 1;
     }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.pageLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pageLink:hover {
+    background-color: #e8e7df;
+}
+
+.pageLinkActive {
+    background-color: #BA9C73;
+    color: #fff;
+}
+
+.pageLinkActive:hover {
+    background-color: #a8895f;
 }

@@ -1,8 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
-import { greatVibes } from "../../fonts";
 
 import styles from "./page.module.css";
 import BlogGrid from "./BlogGrid";
+import FullHeightSection from "components/FullHeightSection";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -22,14 +22,16 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function BlogPage({ params }) {
+export default async function BlogPage({ params, searchParams }) {
   const { locale } = await params;
+  const { page } = await searchParams;
+  const currentPage = Math.max(1, Number(page) || 1);
   setRequestLocale(locale);
 
   return (
-    <div className={styles.container}>
-      <h1 className={`${styles.heading} ${greatVibes.variable}`}>Blog</h1>
-      <BlogGrid locale={locale} />
-    </div>
+    <FullHeightSection className={styles.container}>
+      <h1 className={styles.heading}>Blog</h1>
+      <BlogGrid locale={locale} page={currentPage} />
+    </FullHeightSection>
   );
 }

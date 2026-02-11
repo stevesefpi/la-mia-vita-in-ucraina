@@ -1,4 +1,3 @@
-import { greatVibes } from "@/src/app/fonts";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero";
 
@@ -11,7 +10,7 @@ export default async function HomeCached({ locale }) {
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return (
-    <div className={greatVibes.variable}>
+    <div>
       <Hero title={t("hero_title")} subtitle={t("hero_text")} />
 
       <div className={styles.first}>

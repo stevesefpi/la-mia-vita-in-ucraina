@@ -1,5 +1,5 @@
 import { getCachedPost } from "@/lib/cachedPost";
-import { fetchPosts } from "lib/fetchPosts";
+import { fetchAllPosts } from "lib/fetchPosts";
 import ImageCarousel from "components/ImageCarousel";
 import styles from "./page.module.css";
 import { setRequestLocale } from "next-intl/server";
@@ -9,7 +9,7 @@ export async function generateStaticParams() {
   let allParams = [];
 
   for (const locale of locales) {
-    const posts = await fetchPosts(locale);
+    const posts = await fetchAllPosts(locale);
     allParams = allParams.concat(
       posts.map((post) => ({
         locale,
