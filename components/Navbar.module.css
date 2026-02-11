@@ -8,9 +8,9 @@
 }
 
 .logo {
-  width: 150px;   
-  height: 61px; 
-  position: relative;   
+  flex: 1;
+  height: 61px;
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -60,7 +60,9 @@
 }
 
 .languages {
+    flex: 1;
     display: flex;
+    justify-content: flex-end;
     gap: 1rem;
 }
 
