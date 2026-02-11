@@ -44,6 +44,7 @@
     font-weight: 600;
     letter-spacing: 0.02em;
     transition: color 0.15s ease-in-out;
+    transform: translateY(2px);
 }
 
 .trigger:hover .code {

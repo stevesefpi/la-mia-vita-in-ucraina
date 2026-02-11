@@ -72,7 +72,7 @@ export default function LanguageSwitcher({ className }) {
                 className={styles.item}
                 onClick={() => setOpen(false)}
               >
-                {l.toUpperCase()}
+                <span className={styles.code}>{l.toUpperCase()}</span>
                 <Image
                   src={FLAG_SRC[l]}
                   alt=""
