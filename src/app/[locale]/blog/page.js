@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 
 import styles from "./page.module.css";
@@ -24,14 +25,20 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPage({ params, searchParams }) {
   const { locale } = await params;
-  const { page } = await searchParams;
-  const currentPage = Math.max(1, Number(page) || 1);
   setRequestLocale(locale);
 
   return (
     <FullHeightSection className={styles.container}>
       <h1 className={styles.heading}>Blog</h1>
-      <BlogGrid locale={locale} page={currentPage} />
+      <Suspense>
+        <BlogContent locale={locale} searchParams={searchParams} />
+      </Suspense>
     </FullHeightSection>
   );
+}
+
+async function BlogContent({ locale, searchParams }) {
+  const { page } = await searchParams;
+  const currentPage = Math.max(1, Number(page) || 1);
+  return <BlogGrid locale={locale} page={currentPage} />;
 }
