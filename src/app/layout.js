@@ -20,8 +20,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${roboto.variable} ${poppins.variable}`}>
       <body suppressHydrationWarning>
         {children}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9233836605518119"
-          crossorigin="anonymous"></script>
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9233836605518119"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
