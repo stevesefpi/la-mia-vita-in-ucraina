@@ -1,12 +1,12 @@
 .container {
-    max-width: 800px;
+    max-width: 960px;
     margin: auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
 }
 
 .heroSection {
-    background-color: #333333;
+    background-color: var(--color-dark);
     color: white;
     padding: 40px;
     text-align: center;
@@ -16,6 +16,7 @@
 
 .heroTitle {
     font-size: 2rem;
+    font-family: var(--font-heading);
     margin-bottom: 10px;
 }
 
@@ -47,6 +48,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    font-family: var(--font-body);
 }
 
 .textarea {
@@ -55,36 +57,38 @@
 }
 
 .submitButton {
-    background-color: #0070f3;
+    background-color: var(--color-dark);
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-family: var(--font-heading);
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .submitButton:hover {
-    background-color: #005bb5;
+    background-color: #253040;
 }
 
 .contactInfo {
     text-align: center;
     margin-top: 20px;
     padding: 20px;
-    background-color: #F0F0F1;
+    background-color: var(--color-bg-section);
     border-radius: 10px;
 }
 
 .contactTitle {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    font-family: var(--font-heading);
+    color: var(--color-text);
 }
 
 .contactEmail {
     font-size: 1.2rem;
-    color: #0070f3;
+    color: var(--color-primary);
     font-weight: bold;
 }

@@ -35,7 +35,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    color: #333;
+    color: var(--color-text);
     font: inherit;
     line-height: 1;
 }
@@ -48,7 +48,7 @@
 }
 
 .trigger:hover .code {
-    color: #BA9C73;
+    color: var(--color-primary);
 }
 
 .caret {
@@ -86,7 +86,7 @@
     padding: 8px 0;
     border-radius: 8px;
     text-decoration: none;
-    color: #333;
+    color: var(--color-text);
     font-weight: 600;
     letter-spacing: 0.02em;
     transition: background-color 0.12s ease-in-out, color 0.12s ease-in-out;
@@ -94,6 +94,6 @@
 
 
 .item:hover {
-    background-color: #F5F4ED;
-    color: #BA9C73;
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
 }

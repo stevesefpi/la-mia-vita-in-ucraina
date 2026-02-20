@@ -12,7 +12,7 @@
   }
 
   .menuContainer {
-    background: #F5F4ED;
+    background: var(--color-bg-light);
     width: 75%;
     max-width: 400px;
     height: 100vh;
@@ -38,7 +38,7 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #333;
+    color: var(--color-text);
 }
 
 @keyframes slideIn {

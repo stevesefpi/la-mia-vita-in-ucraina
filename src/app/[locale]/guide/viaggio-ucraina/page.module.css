@@ -1,14 +1,15 @@
 .container {
-  max-width: 800px;
+  max-width: var(--max-width-content);
   margin: 0 auto;
   padding: 2rem 1rem;
-  font-family: system-ui, sans-serif;
-  color: #222;
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.7;
 }
 
 .title {
   font-size: 2.5rem;
+  font-family: var(--font-heading);
   margin-bottom: 1rem;
   text-align: center;
   line-height: 1.2;
@@ -17,7 +18,7 @@
 .subtitle {
   font-style: italic;
   text-align: center;
-  color: #555;
+  color: var(--color-text-light);
   margin-bottom: 2rem;
 }
 
@@ -31,6 +32,7 @@
 
 .content h2 {
   font-size: 1.8rem;
+  font-family: var(--font-heading);
   margin-top: 2.5rem;
   border-bottom: 2px solid #eee;
   padding-bottom: 0.4rem;
@@ -38,6 +40,7 @@
 
 .content h3 {
   font-size: 1.4rem;
+  font-family: var(--font-heading);
   margin-top: 1.8rem;
   margin-bottom: 0.6rem;
 }
@@ -85,21 +88,21 @@
 }
 
 .link {
-  color: #7eb6ff; 
+  color: #7eb6ff;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .link:hover {
-  color: #143074; 
+  color: #143074;
 }
 
 .figureImage {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  max-width: 500px; 
+  max-width: 500px;
   margin: 0 auto;
   display: block;
 }

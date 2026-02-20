@@ -14,19 +14,19 @@
 }
 
 .header {
-  color: #313c4d;
+  color: var(--color-dark);
   text-align: center;
   font-size: 3.5rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   animation: pop-in 0.6s ease-in-out;
 }
 
 .text {
-  font-size: 1.5rem;
-  font-family: "Merriweather", serif;
+  font-size: 1.25rem;
+  font-family: var(--font-body);
   line-height: 1.7;
-  color: #3c434a;
+  color: var(--color-text);
 }
 
 .paragraphContainer {
@@ -50,14 +50,14 @@
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  background-color: #f0f0f1;
+  background-color: var(--color-bg-section);
 }
 
 .infoBoxTitle {
   text-align: center;
-  font-size: xx-large;
+  font-size: 2rem;
   font-weight: 900;
-  font-family: sans-serif;
+  font-family: var(--font-heading);
   margin: 2.5rem auto;
 }
 
@@ -74,7 +74,7 @@
   color: white;
   border: none;
   border-radius: 50px;
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
@@ -92,12 +92,11 @@
 
 .flexContainer {
   align-items: stretch;
-  background-color: #f0f0f1;
+  background-color: var(--color-bg-section);
   justify-content: center;
   width: 100%;
   min-height: auto;
   margin: auto;
-  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
@@ -106,7 +105,7 @@
 
 .flexContainer .column {
   margin: calc(40 / 16 * 1rem);
-  max-width: 25%;
+  max-width: 40%;
   min-height: 350px;
   border-radius: 20px;
   padding: 3% 5%;
@@ -122,8 +121,6 @@
   opacity: 0;
   transform: scale(0.95);
 }
-
-/* Explainer styles */
 
 .hero {
   position: relative;
@@ -152,7 +149,7 @@
 }
 
 .title {
-  font-family: var(--font-roboto), sans-serif;
+  font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -167,10 +164,10 @@
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  font-family: "Merriweather", serif;
+  font-size: 1.25rem;
+  font-family: var(--font-body);
   max-width: 600px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 @media (max-width: 1100px) {
@@ -188,7 +185,7 @@
   }
 
   .subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0 1rem;
   }
 
@@ -244,20 +241,17 @@
   }
 
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.7;
     padding: 0 1.5rem;
-
   }
+
   .first {
     background-image: none;
     background: linear-gradient(45deg, hsl(52, 33%, 96%), hsl(208, 33%, 92%));
   }
 
   .header {
-    font-family:
-      "Brush Script MT", "Apple Chancery", "Segoe Script", "Lucida Handwriting",
-      cursive;
     font-size: 3rem;
     margin: 25px auto;
   }
@@ -283,17 +277,5 @@
   .button_one,
   .button_two {
     padding: 1rem;
-  }
-}
-
-@keyframes pop-in {
-  0% {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
   }
 }

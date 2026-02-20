@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5rem;
-    background-color: #F5F4ED;
+    background-color: var(--color-bg-light);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,23 +32,23 @@
 }
 
 .menu li {
-    font-family: Arial, sans-serif;
-    font-size: 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
 .menu li a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-text);
     transition: color 0.3s;
 }
 
 .menu li a:hover {
-    color: #BA9C73
+    color: var(--color-primary);
 }
 
 .menu li a.active {
-    color: #BA9C73;
+    color: var(--color-primary);
     font-weight: bold;
 }
 
@@ -57,7 +57,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #333;
+    color: var(--color-text);
 }
 
 .languages {
@@ -131,23 +131,23 @@
     }
 
     .mobileMenu li {
-        font-family: Arial, sans-serif;
-        font-size: 1.5rem;
+        font-family: var(--font-body);
+        font-size: 1.25rem;
         font-weight: 500;
     }
 
     .mobileMenu li a {
         text-decoration: none;
-        color: #333;
+        color: var(--color-text);
         transition: color 0.3s ease-in-out;
     }
 
     .mobileMenu li a:hover {
-        color: #BA9C73;
+        color: var(--color-primary);
     }
 
     .mobileMenu li a.active {
-        color: #BA9C73;
+        color: var(--color-primary);
         font-weight: bold;
     }
 

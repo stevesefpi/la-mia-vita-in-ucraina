@@ -20,6 +20,7 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=61566181132367"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook"
             >
               <Facebook />
             </a>
@@ -28,6 +29,7 @@ export default function Footer() {
               href="https://www.instagram.com/mylifeinukraine/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
             >
               <Instagram />
             </a>
@@ -36,6 +38,7 @@ export default function Footer() {
               href="https://x.com/mylifeinukraine"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="X (Twitter)"
             >
               <Twitter />
             </a>

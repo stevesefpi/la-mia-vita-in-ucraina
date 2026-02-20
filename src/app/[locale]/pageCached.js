@@ -31,8 +31,8 @@ export default async function HomeCached({ locale }) {
           </p>
         </div>
 
-        <Link className={styles.buttonLink} href={`/${locale}/blog`}>
-          <button className={styles.button_one}>{t("visit_button")}</button>
+        <Link className={`${styles.buttonLink} ${styles.button_one}`} href={`/${locale}/blog`}>
+          {t("visit_button")}
         </Link>
       </div>
 
@@ -45,8 +45,8 @@ export default async function HomeCached({ locale }) {
             })}
           </p>
 
-          <Link className={styles.buttonLink} href="https://u24.gov.ua/">
-            <button className={styles.button_two}>{t("donate_button")}</button>
+          <Link className={`${styles.buttonLink} ${styles.button_two}`} href="https://u24.gov.ua/">
+            {t("donate_button")}
           </Link>
         </div>
 

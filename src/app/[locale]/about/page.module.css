@@ -1,11 +1,11 @@
 .container {
-    background-color: #F0F0F1;
+    background-color: var(--color-bg-section);
     max-width: 100vw;
     margin: auto;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.7;
     text-align: center;
 }
 
@@ -45,6 +45,7 @@
 
 .heroText h1 {
     font-size: 3rem;
+    font-family: var(--font-heading);
     margin: 0 auto;
 }
 
@@ -72,10 +73,15 @@
 }
 
 .column {
-    float: left;
     width: 50%;
     padding: 0 5rem;
-    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
 }
 
 .sectionOverlay::before {
@@ -90,7 +96,7 @@
 }
 
 .sectionBox {
-    background-color: #F0F0F1;
+    background-color: var(--color-bg-section);
     padding: 40px;
     border-radius: 10px;
     max-width: 80%;
@@ -101,13 +107,14 @@
 .sectionTitle {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #333;
+    font-family: var(--font-heading);
+    color: var(--color-text);
 }
 
 .sectionText {
     position: relative;
     z-index: 2;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
@@ -119,8 +126,8 @@
 }
 
 .sectionParagraph {
-    background-color: #F0F0F1;
-    color: #555;
+    background-color: var(--color-bg-section);
+    color: var(--color-text-light);
     font-size: 1.2rem;
     position: relative;
     z-index: 2;
@@ -131,27 +138,28 @@
 .linkButton {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #F5F4ED;
-    color: #333;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-white);
     text-decoration: none;
     border-radius: 5px;
+    font-family: var(--font-heading);
     font-weight: bold;
     font-size: 1rem;
     margin-top: 10px;
     text-align: center;
     position: relative;
     z-index: 2;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .linkButton:hover {
-    background-color: #f5f4ed83;
-    transform: scale(1.1);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
 
 .copyrightSection {
     width: 100%;
-    background-color: #F0F0F1;
+    background-color: var(--color-bg-section);
     padding: 40px 20px;
     margin-top: 0;
 }
@@ -165,23 +173,17 @@
 .copyrightTitle {
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    font-family: var(--font-heading);
+    color: var(--color-text);
     text-align: left;
 }
 
 .copyrightParagraph {
     font-size: 1.2rem;
-    color: #555;
+    color: var(--color-text-light);
     max-width: 100%;
     text-align: left;
 }
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 
 /* max width for phones, then max width for tablets, then min-width for PC */
 
@@ -219,7 +221,6 @@
     }
 
     .column {
-        float: none;
         width: 100%;
         padding: 0 1rem;
     }
@@ -230,6 +231,6 @@
     .heroParagraph {
         margin-bottom: 50px;
         padding: 0 10px;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
