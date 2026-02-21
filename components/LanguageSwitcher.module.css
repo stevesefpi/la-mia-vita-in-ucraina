@@ -8,12 +8,13 @@
 .flagImg {
   opacity: 0.85;
   vertical-align: middle;
+  transform: translateY(2px);
   transition: transform 0.12s ease, opacity 0.12s ease;
 }
 
 .trigger:hover .flagImg,
 .item:hover .flagImg {
-  transform: scale(1.06);
+  transform: translateY(2px) scale(1.06);
   opacity: 1;
 }
 
