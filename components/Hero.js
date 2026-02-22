@@ -34,7 +34,6 @@ export default function Hero({ title, subtitle }) {
       />
       <div className={styles.heroContent}>
         <h1 className={styles.title}>{title}</h1>
-        <hr className={styles.divider} />
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
     </section>
