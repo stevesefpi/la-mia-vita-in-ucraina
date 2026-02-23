@@ -28,6 +28,10 @@
     "view_all": "View all posts",
     "read_more": "Read More"
   },
+  "Blog": {
+    "title": "Blog",
+    "subtitle": "Stories, experiences and insights"
+  },
   "Info": {
     "title": "The project",
     "intro": "Hello! My name is Steven, and I’m an Italian web developer who has been living in Ukraine for the past five years. Through this blog, I share my personal experiences and everyday stories of life in a country that has both welcomed me and taught me so much. Each post is a glimpse into Ukrainian reality, seen and felt through my own eyes.",

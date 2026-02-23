@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import styles from "./page.module.css";
 import BlogGrid from "./BlogGrid";
@@ -27,13 +27,22 @@ export default async function BlogPage({ params, searchParams }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: "Blog" });
+
   return (
-    <FullHeightSection className={styles.container}>
-      <h1 className={styles.heading}>Blog</h1>
-      <Suspense>
-        <BlogContent locale={locale} searchParams={searchParams} />
-      </Suspense>
-    </FullHeightSection>
+    <>
+      <div className={styles.banner}>
+        <div className={styles.bannerContent}>
+          <h1 className={styles.bannerTitle}>{t("title")}</h1>
+          <p className={styles.bannerSubtitle}>{t("subtitle")}</p>
+        </div>
+      </div>
+      <FullHeightSection className={styles.container}>
+        <Suspense>
+          <BlogContent locale={locale} searchParams={searchParams} />
+        </Suspense>
+      </FullHeightSection>
+    </>
   );
 }
 

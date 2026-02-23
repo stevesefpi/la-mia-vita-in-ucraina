@@ -2,7 +2,7 @@ import Link from "next/link";
 import { fetchPosts } from "lib/fetchPosts";
 import styles from "./page.module.css";
 
-const PER_PAGE = 3;
+const PER_PAGE = 6;
 
 export default async function BlogGrid({ locale, page }) {
   "use cache";
