@@ -48,16 +48,34 @@ export default async function BlogPost({ params }) {
     return <h1>Invalid Post</h1>;
   }
 
+  // Format date
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString(locale === "it" ? "it-IT" : "en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
+
   return (
     <div>
-      {/* Cover Image with Title Overlay */}
+      {/* Cover Image - no overlay */}
       <div
         className={styles.coverImage}
         style={{ backgroundImage: `url(${post.cover_image})` }}
-      >
+      />
+
+      {/* Header Card with date, title, and summary */}
+      <div className={styles.headerCard}>
+        <p className={styles.date}>{formatDate(post.created_at)}</p>
         <h1 className={styles.title}>{post.title}</h1>
+        {post.description && (
+          <p className={styles.summary}>{post.description}</p>
+        )}
       </div>
 
+      {/* Blog Content */}
       {Array.isArray(post.content) ? (
         post.content
           .filter((block) => block.type === "text")
