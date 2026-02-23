@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { fetchPosts } from "lib/fetchPosts";
 import { getTranslations } from "next-intl/server";
 import styles from '../src/app/[locale]/page.module.css';
@@ -28,11 +29,16 @@ export default async function LatestPosts({ locale }) {
             href={`/${locale}/blog/${post.id}`}
             className={styles.articleCard}
           >
-            <img
-              src={post.cover_image}
-              alt={post.title}
-              className={styles.articleCardImage}
-            />
+            <div style={{ position: 'relative', width: '100%', height: '200px' }}>
+              <Image
+                src={post.cover_image}
+                alt={post.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className={styles.articleCardImage}
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
             <div className={styles.articleCardBody}>
               <h3 className={styles.articleCardTitle}>{post.title}</h3>
               {post.description && (

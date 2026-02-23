@@ -24,7 +24,7 @@ export default function Hero({ title, subtitle }) {
   return (
     <section className={styles.hero} style={{ height: heroHeight }}>
       <Image
-        src="/carpazi.jpg"
+        src="/carpazi.webp"
         alt="Carpathian Mountains in Ukraine"
         fill
         priority

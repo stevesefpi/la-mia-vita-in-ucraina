@@ -27,8 +27,16 @@ export async function generateMetadata({ params }) {
         {
           rel: "preload",
           as: "image",
-          href: "/carpazi.jpg",
+          href: "/carpazi.webp",
           fetchpriority: "high",
+        },
+        {
+          rel: "preconnect",
+          href: "https://lknobbnnugzhxbcodema.supabase.co",
+        },
+        {
+          rel: "dns-prefetch",
+          href: "https://lknobbnnugzhxbcodema.supabase.co",
         },
       ],
     },
