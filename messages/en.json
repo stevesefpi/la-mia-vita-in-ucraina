@@ -30,7 +30,8 @@
   },
   "Blog": {
     "title": "Blog",
-    "subtitle": "Stories, experiences and insights"
+    "subtitle": "Stories, experiences and insights",
+    "read_more": "Read More"
   },
   "Info": {
     "title": "The project",

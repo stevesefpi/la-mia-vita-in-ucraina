@@ -27,8 +27,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  padding: 3% 5%;
-  max-width: 1600px;
+  padding: 3rem 40px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
@@ -144,8 +144,8 @@
 
 /* Latest Articles Section */
 .latestSection {
-  padding: 4rem 5%;
-  max-width: 1600px;
+  padding: 4rem 40px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
@@ -270,8 +270,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  padding: 4rem 5%;
-  max-width: 1600px;
+  padding: 4rem 40px;
+  max-width: 1400px;
   width: 100%;
 }
 
@@ -359,7 +359,7 @@
   .cardsContainer {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding: 3% 5%;
+    padding: 3rem 40px;
   }
 
   .card {
@@ -381,7 +381,7 @@
     max-width: 100%;
     min-height: auto;
     border-radius: 0;
-    padding: 2rem 5%;
+    padding: 2rem 40px;
     background: #F8FAFC;
     border: none;
   }
@@ -425,7 +425,7 @@
   .cardsContainer {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    padding: 0 1.5rem;
+    padding: 0 40px;
   }
 
   .card {
@@ -447,7 +447,7 @@
   }
 
   .latestSection {
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 40px;
   }
 
   .latestHeader {

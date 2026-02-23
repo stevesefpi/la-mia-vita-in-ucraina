@@ -3,7 +3,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import styles from "./page.module.css";
 import BlogGrid from "./BlogGrid";
-import FullHeightSection from "components/FullHeightSection";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -37,11 +36,11 @@ export default async function BlogPage({ params, searchParams }) {
           <p className={styles.bannerSubtitle}>{t("subtitle")}</p>
         </div>
       </div>
-      <FullHeightSection className={styles.container}>
+      <div className={styles.container}>
         <Suspense>
           <BlogContent locale={locale} searchParams={searchParams} />
         </Suspense>
-      </FullHeightSection>
+      </div>
     </>
   );
 }

@@ -30,7 +30,8 @@
   },
     "Blog": {
     "title": "Blog",
-    "subtitle": "Storie, esperienze ed approfondimenti"
+    "subtitle": "Storie, esperienze ed approfondimenti",
+    "read_more": "Leggi di più"
   },
   "Info": {
     "title": "Informazioni",
