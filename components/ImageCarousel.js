@@ -91,13 +91,14 @@ export default function ImageCarousel({ images }) {
                 className={styles.carouselImage}
                 fill
                 sizes="(max-width: 939px) 75vw, 800px"
+                quality={90}
                 priority
               />
             </button>
           </div>
 
-          {/* Hide these arrows when the modal is open so they don't duplicate */}
-          {!isOpen && (
+          {/* Hide arrows when modal is open or when there's only one image */}
+          {!isOpen && images.length > 1 && (
             <>
               <button
                 type="button"
@@ -147,17 +148,19 @@ export default function ImageCarousel({ images }) {
               ×
             </button>
 
-            <button
-              type="button"
-              className={`${styles.modalArrow} ${styles.modalLeft}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                prevImage();
-              }}
-              aria-label="Previous image"
-            >
-              &#8592;
-            </button>
+            {images.length > 1 && (
+              <button
+                type="button"
+                className={`${styles.modalArrow} ${styles.modalLeft}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prevImage();
+                }}
+                aria-label="Previous image"
+              >
+                &#8592;
+              </button>
+            )}
 
             <div
               className={styles.modalImageWrap}
@@ -169,21 +172,24 @@ export default function ImageCarousel({ images }) {
                 fill
                 className={styles.modalImage}
                 sizes="100vw"
+                quality={95}
                 priority
               />
             </div>
 
-            <button
-              type="button"
-              className={`${styles.modalArrow} ${styles.modalRight}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                nextImage();
-              }}
-              aria-label="Next image"
-            >
-              &#8594;
-            </button>
+            {images.length > 1 && (
+              <button
+                type="button"
+                className={`${styles.modalArrow} ${styles.modalRight}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextImage();
+                }}
+                aria-label="Next image"
+              >
+                &#8594;
+              </button>
+            )}
           </div>
         </div>
       )}
