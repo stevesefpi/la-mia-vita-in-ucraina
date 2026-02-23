@@ -1,12 +1,6 @@
 .first {
-  padding-top: 5%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url("/bandiera-ucraina.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 80vh;
+  padding: 3rem 0;
+  background-color: #F8FAFC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,16 +23,76 @@
   color: var(--color-text);
 }
 
-.paragraphContainer {
+.cardsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 2rem;
-  padding: 3% 15%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 3% 5%;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.paragraphContainer p {
-  width: 100%;
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cardClickable {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.cardClickable:hover .cardArrow {
+  transform: translateX(4px);
+}
+
+.cardIcon {
+  color: #313C4D;
+  margin-bottom: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.cardIcon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardArrow {
+  color: #313C4D;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cardText {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6b7280;
 }
 
 .sectionContainer {
@@ -65,12 +119,11 @@
   text-decoration: none;
 }
 
-.button_one,
 .button_two {
   display: block;
   margin: 2rem auto;
   padding: 0.9rem 2rem;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #313C4D;
   color: white;
   border: none;
   border-radius: 50px;
@@ -84,32 +137,151 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-.button_one:hover,
 .button_two:hover {
   background-color: rgba(0, 0, 0, 0.9);
   transform: scale(1.05);
 }
 
+/* Latest Articles Section */
+.latestSection {
+  padding: 4rem 5%;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.latestHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.latestHeaderText h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin: 0 0 0.35rem 0;
+}
+
+.latestHeaderText p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.viewAllLink {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #313C4D;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+  margin-top: 0.25rem;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}
+
+.latestGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.articleCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.articleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.articleCardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.articleCardBody {
+  padding: 1.25rem;
+}
+
+.articleCardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.35;
+}
+
+.articleCardDescription {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMoreLink {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #313C4D;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.readMoreLink:hover {
+  text-decoration: underline;
+}
+
+.flexContainerOuter {
+  background-color: #F8FAFC;
+  width: 100%;
+}
+
 .flexContainer {
   align-items: stretch;
-  background-color: var(--color-bg-section);
   justify-content: center;
-  width: 100%;
   min-height: auto;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
-  padding: 0 25px;
+  gap: 1.5rem;
+  padding: 4rem 5%;
+  max-width: 1600px;
+  width: 100%;
 }
 
 .flexContainer .column {
-  margin: calc(40 / 16 * 1rem);
-  max-width: 40%;
+  max-width: 50%;
   min-height: 350px;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 3% 5%;
-  background: #edeced;
+  background: white;
+  border: 1px solid #e5e7eb;
   flex: 1;
 }
 
@@ -184,11 +356,18 @@
     padding-top: 5%;
   }
 
-  .paragraphContainer {
-    display: flex;
-    flex-direction: column;
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding: 3% 8%;
+    padding: 3% 5%;
+  }
+
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .flexContainerOuter {
+    background-color: transparent;
   }
 
   .flexContainer {
@@ -201,19 +380,23 @@
   .flexContainer .column {
     max-width: 100%;
     min-height: auto;
-    margin: 0;
     border-radius: 0;
-    padding: 2% 5%;
+    padding: 2rem 5%;
     background: #edeced;
+    border: none;
   }
 
   .flexContainer .column:nth-of-type(2) {
     background: #d9dee2;
   }
 
-  .button_one,
   .button_two {
+    width: 300px;
     padding: 2%;
+  }
+
+  .latestGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -239,26 +422,40 @@
     margin: 25px auto;
   }
 
-  .paragraphContainer {
-    padding: 0 25px;
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0 1.5rem;
   }
 
-  .heroText {
-    margin: 0;
+  .card {
+    padding: 1.5rem;
   }
 
-  .heroText::after {
-    content: "";
-    display: block;
-    margin: 25px auto;
+  .cardIcon svg {
+    width: 36px;
+    height: 36px;
   }
 
-  .heroText:last-of-type::after {
-    content: none;
+  .cardTitle {
+    font-size: 1.15rem;
   }
 
-  .button_one,
   .button_two {
+    width: 100%;
     padding: 1rem;
+  }
+
+  .latestSection {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .latestHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .latestGrid {
+    grid-template-columns: 1fr;
   }
 }

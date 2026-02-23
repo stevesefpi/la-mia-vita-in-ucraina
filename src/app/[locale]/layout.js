@@ -74,8 +74,8 @@ export default async function LocaleLayout({ children, params }) {
     <html lang={locale} className={`${roboto.variable} ${poppins.variable}`}>
       <body suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar />
           <div className={styles.pageContainer}>
-            <Navbar />
             <div className={styles.mainContent}>{children}</div>
             <Footer />
           </div>
@@ -88,7 +88,5 @@ export default async function LocaleLayout({ children, params }) {
         />
       </body>
     </html>
-
-
   );
 }

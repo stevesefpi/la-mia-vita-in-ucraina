@@ -29,7 +29,6 @@ export default function Hero({ title, subtitle }) {
         fill
         priority
         fetchPriority='high'
-        sizes="100vw"
         className={styles.heroImage}
       />
       <div className={styles.heroContent}>
