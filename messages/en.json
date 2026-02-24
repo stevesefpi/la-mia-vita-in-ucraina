@@ -34,6 +34,8 @@
     "read_more": "Read More"
   },
   "Info": {
+    "banner_title": "About the Project",
+    "banner_subtitle": "Objectives and insights",
     "title": "The project",
     "intro": "Hello! My name is Steven, and I’m an Italian web developer who has been living in Ukraine for the past five years. Through this blog, I share my personal experiences and everyday stories of life in a country that has both welcomed me and taught me so much. Each post is a glimpse into Ukrainian reality, seen and felt through my own eyes.",
     "guide_title": "Guides",
@@ -49,16 +51,22 @@
     "copyright_text": "All images on this website are the exclusive property of the author and are protected by copyright law. Any use, reproduction, or distribution of these images without the author’s explicit permission is strictly prohibited. However, you may use the images provided that proper credit is given, including the author’s name (My Life in Ukraine) and a link to the website (mylifeinukraine.com)."
   },
   "Contact": {
-    "title": "Contact me",
-    "text": "If my stories have sparked your curiosity and you’d like to know more, or for any other reason, feel free to send me a message using the form below or write to me by email.",
+    "banner_title": "Get in Touch",
+    "banner_subtitle": "I'd love to hear from you! Whether you have questions, comments, or just want to connect.",
+    "contact_info_title": "Contact Information",
+    "email_label": "Email",
+    "location_label": "Location",
+    "location_value": "Chernihiv, Ukraine",
+    "response_title": "Response Time",
+    "response_text": "I typically respond to messages within 24-48 hours. Thank you for your patience!",
+    "form_title": "Send Me a Message",
     "name": "Name",
     "name_placeholder": "Your name",
     "email": "Email",
-    "email_placeholder": "Your email address",
+    "email_placeholder": "your.email@example.com",
     "message": "Message",
-    "message_placeholder": "Write your message here",
-    "send_button": "Send",
-    "contact_email": "My email"
+    "message_placeholder": "Your message...",
+    "send_button": "Send Message"
   },
   "Footer": {
     "name": "My Life in Ukraine",

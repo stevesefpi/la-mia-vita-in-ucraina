@@ -13,7 +13,14 @@ export default async function AboutPage({ params }) {
   const t = await getTranslations({ locale, namespace: "Info" });
 
   return (
-    <div className={styles.container}>
+    <>
+      <div className={styles.banner}>
+        <div className={styles.bannerContent}>
+          <h1 className={styles.bannerTitle}>{t("banner_title")}</h1>
+          <p className={styles.bannerSubtitle}>{t("banner_subtitle")}</p>
+        </div>
+      </div>
+      <div className={styles.container}>
       <div
         className={styles.heroSection}
         style={{ backgroundImage: "url('/about-1.png')" }}
@@ -68,5 +75,6 @@ export default async function AboutPage({ params }) {
         </div>
       </div>
     </div>
+    </>
   );
 }

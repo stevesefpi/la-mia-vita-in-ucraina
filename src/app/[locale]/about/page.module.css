@@ -1,3 +1,33 @@
+.banner {
+    width: 100%;
+    background-color: #1D293D;
+    padding: 60px 0;
+}
+
+.bannerContent {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.bannerTitle {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-white);
+    margin: 0 0 8px 0;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+.bannerSubtitle {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-white);
+    margin: 0;
+    text-align: left;
+}
+
 .container {
     background-color: var(--color-bg-section);
     max-width: 100vw;
