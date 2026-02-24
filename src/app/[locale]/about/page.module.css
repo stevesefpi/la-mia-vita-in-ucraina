@@ -1,3 +1,5 @@
+/* ── Banner (unchanged) ── */
+
 .banner {
     width: 100%;
     background-color: #1D293D;
@@ -28,239 +30,245 @@
     text-align: left;
 }
 
-.container {
-    background-color: var(--color-bg-section);
-    max-width: 100vw;
-    margin: auto;
-    padding: 0;
-    font-family: var(--font-body);
-    font-size: 1.2rem;
-    line-height: 1.7;
-    text-align: center;
-}
+/* ── Section 1: Intro ── */
 
-.heroSection {
+.introSection {
     position: relative;
+    padding: 80px 40px;
     overflow: hidden;
-    width: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: 0% 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
 
-.heroOverlay {
+.introBg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.heroText {
-    position: relative;
-    z-index: 2;
-    font-size: 2rem;
-    font-weight: bold;
-    max-width: 600px;
-    margin: auto 0;
-}
-
-.heroText h1 {
-    font-size: 3rem;
-    font-family: var(--font-heading);
-    margin: 0 auto;
-}
-
-.heroParagraph {
-    position: relative;
-    z-index: 2;
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 0;
-}
-
-.sectionOverlay {
-    position: relative;
+    inset: 0;
     background-size: cover;
     background-position: center;
-    height: 75vh;
-    padding: 100px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding-top: 0;
+    z-index: 0;
 }
 
-.column {
-    width: 50%;
-    padding: 0 5rem;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 2;
-}
-
-.sectionOverlay::before {
-    content: "";
+.introOverlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.sectionBox {
-    background-color: var(--color-bg-section);
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 80%;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.sectionTitle {
-    font-size: 1.8rem;
-    font-weight: bold;
-    font-family: var(--font-heading);
-    color: var(--color-text);
-}
-
-.sectionText {
+.introContent {
     position: relative;
     z-index: 2;
-    font-size: 1.25rem;
-    font-weight: bold;
+    max-width: 1320px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 48px;
 }
 
-.blackSection {
-    background-color: #000000;
+.introTitle {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 20px 0;
+}
+
+.introText {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* ── Section 2: Card Grid ── */
+
+.cardSection {
+    background: var(--color-bg-section);
+    padding: 80px 40px;
+}
+
+.cardGrid {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cardIcon {
+    width: 48px;
+    height: 48px;
+    background: #EFF6FF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cardTitle {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 12px 0;
+}
+
+.cardText {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-text-light);
+    margin: 0;
+    flex: 1;
+}
+
+.cardButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 24px;
+    background: #313C4D;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+    align-self: center;
+}
+
+.cardButton:hover {
+    background: #1D293D;
+}
+
+/* ── Section 3: Closing ── */
+
+.closingSection {
+    position: relative;
+    padding: 100px 40px;
+    overflow: hidden;
+}
+
+.closingBg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.closingOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.closingContent {
+    position: relative;
+    z-index: 2;
+    max-width: 1320px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 48px;
+    backdrop-filter: blur(4px);
+}
+
+.closingText {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.75;
     color: white;
     margin: 0;
-    padding: 5rem 5rem;
-}
-
-.sectionParagraph {
-    background-color: var(--color-bg-section);
-    color: var(--color-text-light);
-    font-size: 1.2rem;
-    position: relative;
-    z-index: 2;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.linkButton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: var(--color-white);
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: var(--font-heading);
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 10px;
     text-align: center;
-    position: relative;
-    z-index: 2;
-    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.linkButton:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-}
+/* ── Copyright ── */
 
 .copyrightSection {
-    width: 100%;
-    background-color: var(--color-bg-section);
-    padding: 40px 20px;
-    margin-top: 0;
+    background: var(--color-bg-section);
+    padding: 48px 40px;
 }
 
-.copyrightBackground {
-    max-width: 80%;
-    margin: auto;
-    padding: 20px;
+.copyrightContent {
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 .copyrightTitle {
-    font-size: 2rem;
-    font-weight: bold;
     font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--color-text);
+    margin: 0 0 12px 0;
     text-align: left;
 }
 
 .copyrightParagraph {
-    font-size: 1.2rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
     color: var(--color-text-light);
-    max-width: 100%;
+    margin: 0;
     text-align: left;
 }
 
-/* max width for phones, then max width for tablets, then min-width for PC */
+/* ── Responsive ── */
 
 @media (max-width: 1100px) {
-
-    .sectionOverlay {
-        height: auto;
-        min-height: 75vh;
-        padding: 60px 20px;
-        padding-top: 60px;
-        align-items: flex-start;
+    .cardGrid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
     }
 
-    .heroSection {
-        padding: 0;
-    }
-
-    .heroText {
-        margin: 3rem auto;
-        align-self: center;
-    }
-
-    .blackSection {
-        padding: 25px 5px;
-        margin: 0;
-    }
-
-    .blackSection p {
-        margin: 0;
-    }
-
+    .introSection,
+    .cardSection,
+    .closingSection,
     .copyrightSection {
-        padding: 0;
-        margin: 0;
-    }
-
-    .column {
-        width: 100%;
-        padding: 0 1rem;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 @media (max-width: 550px) {
+    .introContent {
+        padding: 32px 24px;
+    }
 
-    .heroParagraph {
-        margin-bottom: 50px;
-        padding: 0 10px;
-        font-size: 1.25rem;
+    .introTitle {
+        font-size: 1.6rem;
+    }
+
+    .closingContent {
+        padding: 32px 24px;
+    }
+
+    .closingText {
+        font-size: 1.05rem;
+    }
+
+    .bannerTitle {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 24px;
     }
 }
