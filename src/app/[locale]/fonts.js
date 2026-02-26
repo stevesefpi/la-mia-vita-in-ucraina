@@ -9,6 +9,7 @@ export const roboto = localFont({
     },
   ],
   display: "swap",
+  preload: false,
   variable: "--font-roboto",
 });
 
@@ -21,5 +22,6 @@ export const poppins = localFont({
     },
   ],
   display: "swap",
+  preload: false,
   variable: "--font-poppins",
 });

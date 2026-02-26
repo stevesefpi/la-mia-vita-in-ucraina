@@ -9,7 +9,7 @@ import Footer from "components/Footer";
 import styles from "./layout.module.css";
 
 import { roboto, poppins } from "./fonts";
-import Script from "next/script";
+
 
 import "./globals.css";
 
@@ -89,9 +89,9 @@ export default async function LocaleLayout({ children, params }) {
           </div>
           <Analytics />
         </NextIntlClientProvider>
-        <Script
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9233836605518119"
-          strategy="afterInteractive"
           crossOrigin="anonymous"
         />
       </body>
