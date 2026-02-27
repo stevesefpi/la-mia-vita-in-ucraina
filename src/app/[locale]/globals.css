@@ -10,6 +10,7 @@
   --font-body: var(--font-roboto), sans-serif;
   --max-width-content: 800px;
   --max-width-wide: 1200px;
+  --navbar-height: calc(2rem + 62px);
 }
 
 *, *::before, *::after {

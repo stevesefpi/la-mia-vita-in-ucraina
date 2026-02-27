@@ -1,28 +1,9 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from '../src/app/[locale]/page.module.css';
 
 export default function Hero({ title, subtitle }) {
-  const [heroHeight, setHeroHeight] = useState('100vh');
-
-  useEffect(() => {
-    const updateHeight = () => {
-      const navbar = document.querySelector('nav');
-      if (navbar) {
-        const navbarHeight = navbar.offsetHeight;
-        setHeroHeight(`calc(100vh - ${navbarHeight}px)`);
-      }
-    };
-
-    updateHeight();
-    window.addEventListener('resize', updateHeight);
-    return () => window.removeEventListener('resize', updateHeight);
-  }, []);
-
   return (
-    <section className={styles.hero} style={{ height: heroHeight }}>
+    <section className={styles.hero}>
       <Image
         src="/carpazi.webp"
         alt="Carpathian Mountains in Ukraine"
