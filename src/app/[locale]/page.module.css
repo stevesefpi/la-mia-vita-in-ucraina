@@ -391,6 +391,10 @@
     background: #FFFFFF;
   }
 
+  .infoBoxTitle {
+    text-align: left;
+  }
+
   .button_two {
     width: 300px;
     padding: 2%;
