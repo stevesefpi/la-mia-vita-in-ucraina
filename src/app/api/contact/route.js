@@ -8,6 +8,11 @@ const redis = new Redis({
   token: process.env.UPSTASH_REDIS_REST_TOKEN,
 });
 
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
+});
+
 // 3 requests per 6 hours per IP
 const ratelimit = new Ratelimit({
   redis,
@@ -73,11 +78,6 @@ export async function POST(req) {
     if (email.includes("\r") || email.includes("\n") || !isValidEmail(email)) {
       return NextResponse.json({ message: "Invalid email" }, { status: 400 });
     }
-
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
-    });
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
