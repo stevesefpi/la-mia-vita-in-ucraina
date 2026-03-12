@@ -141,7 +141,6 @@ export default function ContactPage() {
               </button>
             </form>
 
-            {status === "sending" && <p>Invio in corso...</p>}
             {status === "success" && (
               <p style={{ color: "green" }}>Email inviata con successo!</p>
             )}
