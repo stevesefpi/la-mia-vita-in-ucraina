@@ -1,66 +1,67 @@
 import { fetchAllPosts } from "@/lib/fetchPosts";
 
 export default async function sitemap() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const posts = await fetchAllPosts();
 
   const postEntries = posts.flatMap((post) => [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${post.id}`, // IT
+      url: `${baseUrl}/blog/${post.id}`, // IT
       lastModified: new Date(post.created_at).toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/blog/${post.id}`, // EN
+      url: `${baseUrl}/en/blog/${post.id}`, // EN
       lastModified: new Date(post.created_at).toISOString(),
     },
   ]);
 
   return [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+      url: `${baseUrl}/`,
       lastModified: new Date().toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en`,
+      url: `${baseUrl}/en`,
       lastModified: new Date().toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
+      url: `${baseUrl}/about`,
       lastModified: new Date("2025-01-01T10:00:12Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/about`,
+      url: `${baseUrl}/en/about`,
       lastModified: new Date("2025-01-01T10:00:12Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
+      url: `${baseUrl}/blog`,
       lastModified: new Date("2025-03-01T12:30:06Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/blog`,
+      url: `${baseUrl}/en/blog`,
       lastModified: new Date("2025-03-01T12:30:06Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/contatti`,
+      url: `${baseUrl}/contatti`,
       lastModified: new Date("2025-02-20T09:15:43Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/contatti`,
+      url: `${baseUrl}/en/contatti`,
       lastModified: new Date("2025-02-20T09:15:43Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/traduzione-intervista`,
+      url: `${baseUrl}/traduzione-intervista`,
       lastModified: new Date("2025-04-10T18:00:22Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/traduzione-intervista`,
+      url: `${baseUrl}/en/traduzione-intervista`,
       lastModified: new Date("2025-04-10T18:00:22Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/guide/viaggio-ucraina`,
+      url: `${baseUrl}/guide/viaggio-ucraina`,
       lastModified: new Date("2025-06-22T14:17:19Z").toISOString(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/guide/viaggio-ucraina`,
+      url: `${baseUrl}/en/guide/viaggio-ucraina`,
       lastModified: new Date("2025-06-22T14:17:19Z").toISOString(),
     },
     ...postEntries,
