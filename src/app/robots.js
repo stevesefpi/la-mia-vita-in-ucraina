@@ -1,3 +1,5 @@
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
 export default function robots() {
   return {
     rules: [
@@ -7,6 +9,6 @@ export default function robots() {
         disallow: ["/api"],
       },
     ],
-    sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
