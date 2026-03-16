@@ -137,26 +137,19 @@ export default function ContactPage() {
                 className={styles.submitButton}
                 disabled={status === "sending"}
               >
-                {status === "sending" ? "Invio..." : t("send_button")}
+                {status === "sending" ? t("status_sending") : t("send_button")}
               </button>
             </form>
 
             {status === "success" && (
-              <p style={{ color: "green" }}>Email inviata con successo!</p>
+              <p style={{ color: "green" }}>{t("status_success")}</p>
             )}
             {status === "ratelimited" && (
-              <p style={{ color: "orange" }}>
-                You sent too many messages. Try again in a few hours.
-              </p>
+              <p style={{ color: "orange" }}>{t("status_ratelimited")}</p>
             )}
             {status === "error" && (
-              <p style={{ color: "red" }}>Errore nell&apos;invio, riprova più tardi.</p>
+              <p style={{ color: "red" }}>{t("status_error")}</p>
             )}
-            {status &&
-              status !== "sending" &&
-              status !== "success" &&
-              status !== "ratelimited" &&
-              status !== "error" && <p style={{ color: "red" }}>{status}</p>}
           </div>
         </div>
       </div>

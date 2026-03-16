@@ -66,7 +66,11 @@
     "email_placeholder": "la.tua.email@esempio.com",
     "message": "Messaggio",
     "message_placeholder": "Il tuo messaggio...",
-    "send_button": "Invia Messaggio"
+    "send_button": "Invia Messaggio",
+    "status_sending": "Invio in corso...",
+    "status_success": "Email inviata con successo!",
+    "status_ratelimited": "Hai inviato troppi messaggi. Riprova tra qualche ora.",
+    "status_error": "Errore nell'invio, riprova più tardi."
   },
   "Footer": {
     "name": "La Mia Vita in Ucraina",
