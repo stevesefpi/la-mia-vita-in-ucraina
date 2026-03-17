@@ -212,6 +212,18 @@
     cursor: not-allowed;
 }
 
+.statusSuccess {
+    color: green;
+}
+
+.statusRatelimited {
+    color: orange;
+}
+
+.statusError {
+    color: red;
+}
+
 @media (max-width: 900px) {
     .contentWrapper {
         flex-direction: column;

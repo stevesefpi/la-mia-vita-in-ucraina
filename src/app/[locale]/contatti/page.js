@@ -142,13 +142,13 @@ export default function ContactPage() {
             </form>
 
             {status === "success" && (
-              <p style={{ color: "green" }}>{t("status_success")}</p>
+              <p className={styles.statusSuccess}>{t("status_success")}</p>
             )}
             {status === "ratelimited" && (
-              <p style={{ color: "orange" }}>{t("status_ratelimited")}</p>
+              <p className={styles.statusRatelimited}>{t("status_ratelimited")}</p>
             )}
             {status === "error" && (
-              <p style={{ color: "red" }}>{t("status_error")}</p>
+              <p className={styles.statusError}>{t("status_error")}</p>
             )}
           </div>
         </div>
