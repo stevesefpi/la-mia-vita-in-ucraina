@@ -6,19 +6,15 @@ import { setRequestLocale } from "next-intl/server";
 
 export async function generateStaticParams() {
   const locales = ["it", "en"];
-  let allParams = [];
 
-  for (const locale of locales) {
-    const posts = await fetchAllPosts(locale);
-    allParams = allParams.concat(
-      posts.map((post) => ({
-        locale,
-        slug: post.id,
-      }))
-    );
-  }
+  const results = await Promise.all(
+    locales.map(async (locale) => {
+      const posts = await fetchAllPosts(locale);
+      return posts.map((post) => ({ locale, slug: post.id }));
+    })
+  );
 
-  return allParams;
+  return results.flat();
 }
 
 export async function generateMetadata({ params }) {
