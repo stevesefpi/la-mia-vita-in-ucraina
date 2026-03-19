@@ -37,7 +37,7 @@ export default async function BlogPage({ params, searchParams }) {
         </div>
       </div>
       <div className={styles.container}>
-        <Suspense>
+        <Suspense fallback={<p>{t("loading")}</p>}>
           <BlogContent locale={locale} searchParams={searchParams} />
         </Suspense>
       </div>
