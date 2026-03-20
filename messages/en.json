@@ -32,7 +32,8 @@
     "title": "Blog",
     "subtitle": "Stories, experiences and insights",
     "read_more": "Read More",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "no_posts": "No blog posts found."
   },
   "Info": {
     "banner_title": "About the Project",

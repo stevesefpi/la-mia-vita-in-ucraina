@@ -32,7 +32,8 @@
     "title": "Blog",
     "subtitle": "Storie, esperienze ed approfondimenti",
     "read_more": "Leggi di più",
-    "loading": "Caricamento..."
+    "loading": "Caricamento...",
+    "no_posts": "Nessun articolo trovato."
   },
   "Info": {
     "banner_title": "Il Progetto",

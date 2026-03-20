@@ -47,7 +47,7 @@ export default async function BlogGrid({ locale, page }) {
             </article>
           ))
         ) : (
-          <p>No blog posts found.</p>
+          <p>{t("no_posts")}</p>
         )}
       </div>
 
