@@ -4,6 +4,24 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+
+  if (locale === "en") {
+    return {
+      title: "About the Project",
+      description:
+        "My Life in Ukraine: discover stories, experiences and guides about daily life in Ukraine in 2026.",
+    };
+  }
+
+  return {
+    title: "Il Progetto",
+    description:
+      "My Life in Ukraine: scopri storie, esperienze e guide sulla vita quotidiana in Ucraina nel 2026.",
+  };
+}
+
 export default async function AboutPage({ params }) {
   "use cache";
 
