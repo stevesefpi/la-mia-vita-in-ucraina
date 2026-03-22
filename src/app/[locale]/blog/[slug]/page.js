@@ -86,7 +86,6 @@ export default async function BlogPost({ params }) {
                 {block.title && (
                   <h3 className={styles.paragraphTitle}>{block.title}</h3>
                 )}
-                {/* <p className={styles.paragraph}>{block.content}</p> */}
                 {block.content.split("\n").map((line, idx) => (
                   <p key={idx} className={styles.paragraph}>
                     {line}
