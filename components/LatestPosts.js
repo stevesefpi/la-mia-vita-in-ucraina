@@ -29,7 +29,7 @@ export default async function LatestPosts({ locale }) {
             href={`/${locale}/blog/${post.id}`}
             className={styles.articleCard}
           >
-            <div style={{ position: 'relative', width: '100%', height: '200px' }}>
+            <div className={styles.articleCardImageWrapper}>
               <Image
                 src={post.cover_image}
                 alt={post.title}
