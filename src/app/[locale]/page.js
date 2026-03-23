@@ -77,7 +77,7 @@ export default async function HomePage({ params }) {
         </div>
       </div>
 
-      <Suspense>
+      <Suspense fallback={<p>{t("loading")}</p>}>
         <LatestPosts locale={locale} />
       </Suspense>
 

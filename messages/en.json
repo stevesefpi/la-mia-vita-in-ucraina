@@ -26,7 +26,8 @@
     "latest_title": "Latest articles",
     "latest_subtitle": "Recent posts from my Ukrainian experiences",
     "view_all": "View all posts",
-    "read_more": "Read More"
+    "read_more": "Read More",
+    "loading": "Loading..."
   },
   "Blog": {
     "title": "Blog",
