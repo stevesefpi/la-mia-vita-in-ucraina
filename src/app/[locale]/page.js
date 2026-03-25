@@ -91,7 +91,7 @@ export default async function HomePage({ params }) {
               })}
             </p>
 
-            <Link className={`${styles.buttonLink} ${styles.button_two}`} href="https://u24.gov.ua/">
+            <Link className={`${styles.buttonLink} ${styles.button_two}`} href="https://u24.gov.ua/" target="_blank" rel="noopener noreferrer">
               {t("donate_button")}
             </Link>
           </div>
