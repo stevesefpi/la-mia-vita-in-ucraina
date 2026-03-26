@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          Copyright © 2026 My Life in Ukraine
+          Copyright © {new Date().getFullYear()} My Life in Ukraine
         </div>
       </div>
     </>
