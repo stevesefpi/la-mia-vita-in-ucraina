@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { SiFacebook, SiInstagram, SiX } from "react-icons/si";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <Facebook />
+              <SiFacebook />
             </a>
             <a
               className={styles.link}
@@ -31,7 +31,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <Instagram />
+              <SiInstagram />
             </a>
             <a
               className={styles.link}
@@ -40,13 +40,13 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="X (Twitter)"
             >
-              <Twitter />
+              <SiX />
             </a>
           </div>
         </div>
 
         <div className={styles.footerBottom}>
-          Copyright © {new Date().getFullYear()} My Life in Ukraine
+          Copyright © 2026 My Life in Ukraine
         </div>
       </div>
     </>
